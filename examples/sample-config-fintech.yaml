@@ -1,0 +1,326 @@
+# Bob Client Bootcamp Configuration - Financial Services Example
+# This is a sample configuration for a fintech client
+
+# =============================================================================
+# CLIENT INFORMATION
+# =============================================================================
+client:
+  name: "SecureBank Financial"
+  market: "Financial Services / Banking"
+  contact:
+    primary: "Jane Smith"
+    email: "jane.smith@securebank.com"
+  
+# =============================================================================
+# TECHNICAL ENVIRONMENT
+# =============================================================================
+technologies:
+  primary_language: "Java"
+  frameworks:
+    - "Spring Boot"
+    - "React"
+    - "Hibernate"
+  tools:
+    - "Docker"
+    - "Kubernetes"
+    - "Jenkins"
+    - "SonarQube"
+  infrastructure: "AWS (EKS, RDS, S3)"
+  version_control: "GitHub Enterprise"
+  ide_preferences:
+    - "IntelliJ IDEA"
+    - "VS Code"
+
+# =============================================================================
+# KEY USE CASES
+# =============================================================================
+use_cases:
+  - name: "Payment API Development"
+    description: "Build secure RESTful APIs for payment processing with proper validation, error handling, and audit logging"
+    priority: "high"
+    technologies: ["Spring Boot", "PostgreSQL", "Redis"]
+    estimated_time: "45 minutes"
+    
+  - name: "Security Compliance Updates"
+    description: "Update code to meet PCI-DSS and SOC2 compliance requirements, including data encryption and access logging"
+    priority: "high"
+    technologies: ["Java", "Spring Security", "AWS KMS"]
+    estimated_time: "30 minutes"
+    
+  - name: "Legacy Code Refactoring"
+    description: "Modernize legacy banking transaction code to improve maintainability and testability"
+    priority: "medium"
+    technologies: ["Java", "JUnit", "Mockito"]
+    estimated_time: "30 minutes"
+    
+  - name: "Microservices Testing"
+    description: "Create comprehensive integration tests for microservices communication"
+    priority: "medium"
+    technologies: ["Spring Boot Test", "TestContainers", "WireMock"]
+    estimated_time: "30 minutes"
+
+# =============================================================================
+# EXTERNAL RESOURCES
+# =============================================================================
+resources:
+  documentation:
+    - name: "Internal API Standards"
+      url: "https://wiki.securebank.com/api-standards"
+      description: "Company-wide API design guidelines and best practices"
+    - name: "Security Guidelines"
+      url: "https://wiki.securebank.com/security"
+      description: "Security requirements and compliance standards"
+      
+  apis:
+    - name: "Payment Gateway API"
+      url: "https://api-internal.securebank.com/payments"
+      authentication: "OAuth 2.0 with client credentials"
+    - name: "Customer Data API"
+      url: "https://api-internal.securebank.com/customers"
+      authentication: "JWT tokens"
+      
+  repositories:
+    - name: "Payment Service"
+      url: "https://github.securebank.com/backend/payment-service"
+      access_notes: "Requires VPN and GitHub Enterprise access"
+    - name: "Common Libraries"
+      url: "https://github.securebank.com/libraries/common-utils"
+      access_notes: "Shared utilities and helpers"
+      
+  reference_materials:
+    - name: "Java Coding Standards"
+      url: "https://wiki.securebank.com/java-standards"
+    - name: "Architecture Decision Records"
+      url: "https://wiki.securebank.com/adr"
+
+# =============================================================================
+# BOOTCAMP SCHEDULE (6 hours)
+# =============================================================================
+schedule:
+  total_duration_hours: 6
+  date: "2026-02-15"
+  timezone: "America/New_York, UTC-5"
+  
+  morning_session:
+    start_time: "09:00"
+    end_time: "12:00"
+    duration_minutes: 180
+    
+    segments:
+      - name: "Introduction & Setup"
+        start_time: "09:00"
+        duration_minutes: 30
+        topics:
+          - "Welcome and team introductions"
+          - "Bootcamp objectives for SecureBank"
+          - "Bob overview and security considerations"
+          - "Environment setup verification"
+          - "Q&A: Initial questions"
+        deliverables:
+          - "All participants have Bob running"
+          - "VPN and repository access confirmed"
+          - "Understanding of bootcamp goals"
+      
+      - name: "Basic Bob Features"
+        start_time: "09:30"
+        duration_minutes: 90
+        topics:
+          - "Core commands and navigation"
+          - "Working with Java and Spring Boot code"
+          - "File operations and code analysis"
+          - "Basic tool usage"
+          - "Best practices for prompting Bob"
+        hands_on:
+          - lab_id: "lab1"
+          - duration: 30
+          - description: "Practice with sample payment service code"
+        deliverables:
+          - "Comfort with basic Bob commands"
+          - "Completed Lab 1 exercises"
+      
+      - name: "Advanced Bob Features"
+        start_time: "11:00"
+        duration_minutes: 60
+        topics:
+          - "Multi-file refactoring in Java"
+          - "Working with Spring Boot applications"
+          - "Code quality and security scanning"
+          - "Debugging and troubleshooting"
+          - "Integration with IntelliJ IDEA"
+        hands_on:
+          - lab_id: "lab2"
+          - duration: 30
+          - description: "Refactor a payment processing module"
+        deliverables:
+          - "Understanding of advanced capabilities"
+          - "Completed Lab 2 exercises"
+  
+  lunch_break:
+    start_time: "12:00"
+    end_time: "13:00"
+    duration_minutes: 60
+  
+  afternoon_session:
+    start_time: "13:00"
+    end_time: "16:00"
+    duration_minutes: 180
+    
+    segments:
+      - name: "SecureBank-Specific Use Cases"
+        start_time: "13:00"
+        duration_minutes: 150
+        topics:
+          - "Payment API development with Bob"
+          - "Security compliance code updates"
+          - "Legacy code modernization"
+          - "Microservices testing strategies"
+          - "Integration with SecureBank tools"
+        hands_on:
+          - lab_id: "lab3"
+          - duration: 90
+          - description: "Work on actual SecureBank payment service scenarios"
+        deliverables:
+          - "Payment API endpoint implemented"
+          - "Security compliance updates applied"
+          - "Legacy code refactored"
+          - "Integration tests created"
+      
+      - name: "Wrap-up & Next Steps"
+        start_time: "15:30"
+        duration_minutes: 30
+        topics:
+          - "Key takeaways for SecureBank team"
+          - "Resources and support channels"
+          - "Integration with CI/CD pipeline"
+          - "Action items for Bob adoption"
+          - "Feedback and Q&A"
+        deliverables:
+          - "Action plan for team adoption"
+          - "List of resources and contacts"
+          - "Feedback collected"
+
+# =============================================================================
+# LAB EXERCISES
+# =============================================================================
+labs:
+  - id: "lab1"
+    name: "Basic Bob Operations with Java"
+    duration_minutes: 30
+    difficulty: "beginner"
+    objectives:
+      - "Navigate Spring Boot project structure"
+      - "Read and analyze Java code"
+      - "Make simple code changes"
+      - "Run Maven tests"
+    prerequisites:
+      - "Bob installed and running"
+      - "Access to sample payment service"
+      - "Java 17 and Maven installed"
+    exercises:
+      - "Read and analyze a Spring Boot controller"
+      - "Update a configuration property"
+      - "Add a new validation rule"
+      - "Run unit tests to verify changes"
+    
+  - id: "lab2"
+    name: "Advanced Java Refactoring"
+    duration_minutes: 30
+    difficulty: "intermediate"
+    objectives:
+      - "Refactor payment processing logic"
+      - "Improve code quality and security"
+      - "Add comprehensive error handling"
+      - "Update integration tests"
+    prerequisites:
+      - "Completed Lab 1"
+      - "Understanding of Spring Boot"
+    exercises:
+      - "Refactor payment validation logic"
+      - "Add proper exception handling"
+      - "Implement audit logging"
+      - "Update tests for new behavior"
+    
+  - id: "lab3"
+    name: "SecureBank Payment Service Implementation"
+    duration_minutes: 90
+    difficulty: "advanced"
+    objectives:
+      - "Build production-ready payment API"
+      - "Implement security requirements"
+      - "Modernize legacy code"
+      - "Create comprehensive tests"
+    prerequisites:
+      - "Completed Labs 1 and 2"
+      - "Access to SecureBank payment service repo"
+    exercises:
+      - "Implement new payment endpoint with validation"
+      - "Add PCI-DSS compliant data encryption"
+      - "Refactor legacy transaction processing"
+      - "Create integration tests with TestContainers"
+
+# =============================================================================
+# PARTICIPANT INFORMATION
+# =============================================================================
+participants:
+  expected_count: "8"
+  roles:
+    - "Backend Engineers (5)"
+    - "Tech Leads (2)"
+    - "DevOps Engineer (1)"
+  skill_levels:
+    - "Junior: 2"
+    - "Mid-level: 4"
+    - "Senior: 2"
+  prerequisites:
+    - "Java and Spring Boot experience"
+    - "Familiarity with Git and Maven"
+    - "IntelliJ IDEA or VS Code installed"
+    - "VPN access to SecureBank network"
+
+# =============================================================================
+# SUCCESS CRITERIA
+# =============================================================================
+success_criteria:
+  - "All participants can use Bob for Java development tasks"
+  - "Team completes payment API implementation"
+  - "Security compliance updates applied successfully"
+  - "Legacy code refactoring demonstrates value"
+  - "Positive feedback from participants (>4/5 rating)"
+  - "Clear adoption plan for payment service team"
+
+# =============================================================================
+# FOLLOW-UP PLAN
+# =============================================================================
+follow_up:
+  - activity: "Office hours for payment service team"
+    timing: "1 week post-bootcamp"
+    duration: "1 hour"
+    
+  - activity: "Review of Bob usage and challenges"
+    timing: "2 weeks post-bootcamp"
+    duration: "30 minutes"
+    
+  - activity: "Advanced security patterns workshop"
+    timing: "1 month post-bootcamp"
+    duration: "2 hours"
+
+# =============================================================================
+# NOTES
+# =============================================================================
+notes: |
+  Special considerations for SecureBank:
+  
+  - All code must remain within SecureBank network (no external AI services)
+  - PCI-DSS compliance requirements for payment data handling
+  - Code review required before production deployment
+  - Security scanning with SonarQube mandatory
+  - All API changes require architecture review
+  - Audit logging required for all data access
+  
+  Network setup:
+  - VPN required for repository access
+  - GitHub Enterprise for version control
+  - Jenkins for CI/CD pipeline
+  - Artifactory for dependency management
+
+# Made with Bob

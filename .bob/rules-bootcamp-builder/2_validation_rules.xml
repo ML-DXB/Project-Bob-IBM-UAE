@@ -1,0 +1,418 @@
+<validation_rules>
+  <overview>
+    Validation ensures bootcamp materials are complete, consistent, and ready to deliver.
+    Always validate before marking work as complete.
+  </overview>
+
+  <configuration_validation>
+    <required_fields>
+      <section name="client">
+        <field name="name" type="string">
+          <validation>Must not be empty or placeholder like "[Client Name]"</validation>
+          <example>Acme Financial Services</example>
+        </field>
+        <field name="market" type="string">
+          <validation>Must be specific industry/market segment</validation>
+          <example>Financial Services / Banking</example>
+        </field>
+        <field name="contact.primary" type="string">
+          <validation>Must be a real name</validation>
+          <example>Jane Smith</example>
+        </field>
+        <field name="contact.email" type="string">
+          <validation>Must be valid email format</validation>
+          <example>jane.smith@acme.com</example>
+        </field>
+      </section>
+
+      <section name="technologies">
+        <field name="primary_language" type="string">
+          <validation>Must be specific language, not placeholder</validation>
+          <example>Python, Java, JavaScript, TypeScript</example>
+        </field>
+        <field name="frameworks" type="array">
+          <validation>Must have at least 1 framework</validation>
+          <example>["Django", "React"]</example>
+        </field>
+        <field name="infrastructure" type="string">
+          <validation>Must specify cloud provider or on-premise</validation>
+          <example>AWS, Azure, GCP, On-premise</example>
+        </field>
+      </section>
+
+      <section name="use_cases">
+        <validation>Must have at least 3 use cases</validation>
+        <validation>At least 2 must be high priority</validation>
+        <validation>Each must have name, description, priority, estimated_time</validation>
+        <field name="name" type="string">
+          <validation>Brief, descriptive name</validation>
+          <example>API Development, Code Refactoring</example>
+        </field>
+        <field name="description" type="string">
+          <validation>Clear explanation of what to accomplish</validation>
+        </field>
+        <field name="priority" type="enum">
+          <validation>Must be: high, medium, or low</validation>
+        </field>
+        <field name="estimated_time" type="string">
+          <validation>Must include time estimate</validation>
+          <example>30 minutes, 45 minutes</example>
+        </field>
+      </section>
+
+      <section name="schedule">
+        <field name="total_duration_hours" type="number">
+          <validation>Must be positive number</validation>
+          <validation>Common values: 3, 4, 6, 12</validation>
+        </field>
+        <field name="date" type="string">
+          <validation>Must be valid date format YYYY-MM-DD</validation>
+        </field>
+        <field name="timezone" type="string">
+          <validation>Must be valid timezone</validation>
+          <example>America/New_York, UTC-5</example>
+        </field>
+      </section>
+
+      <section name="labs">
+        <validation>Must have 3 labs defined</validation>
+        <validation>Each lab must have id, name, duration, difficulty, objectives</validation>
+      </section>
+    </required_fields>
+
+    <consistency_checks>
+      <check name="timing_adds_up">
+        <description>Verify schedule timing is mathematically correct</description>
+        <rule>morning_session.duration_minutes + lunch_break.duration_minutes + afternoon_session.duration_minutes = total_duration_hours * 60</rule>
+      </check>
+
+      <check name="use_cases_fit_time">
+        <description>Ensure use cases fit within Lab 3 time allocation</description>
+        <rule>Sum of use_case.estimated_time ≤ afternoon_session.segments[client-specific].duration_minutes</rule>
+        <warning>If close to limit, warn about buffer time for questions</warning>
+      </check>
+
+      <check name="tech_stack_consistency">
+        <description>Technology references are consistent throughout</description>
+        <rule>All framework references match technologies.frameworks</rule>
+        <rule>All tool references match technologies.tools</rule>
+      </check>
+
+      <check name="lab_timing_realistic">
+        <description>Lab durations are achievable</description>
+        <rule>Lab 1: 20-40 minutes (typically 30)</rule>
+        <rule>Lab 2: 20-40 minutes (typically 30)</rule>
+        <rule>Lab 3: 60-120 minutes (typically 90)</rule>
+      </check>
+    </consistency_checks>
+
+    <placeholder_detection>
+      <description>Ensure no template placeholders remain</description>
+      <patterns_to_flag>
+        <pattern>[Client Name]</pattern>
+        <pattern>[Industry/Market]</pattern>
+        <pattern>[e.g., ...]</pattern>
+        <pattern>[URL]</pattern>
+        <pattern>[Link]</pattern>
+        <pattern>[Your ...]</pattern>
+        <pattern>[Customize ...]</pattern>
+      </patterns_to_flag>
+      <action>If found, ask user to provide specific values</action>
+    </placeholder_detection>
+  </configuration_validation>
+
+  <lab_validation>
+    <lab name="lab1">
+      <required_elements>
+        <element>Objectives specific to client's tech stack</element>
+        <element>Exercises using client's programming language</element>
+        <element>Examples with client's frameworks</element>
+        <element>References to client's tools</element>
+      </required_elements>
+      
+      <checks>
+        <check>No generic "Python" examples if client uses Java</check>
+        <check>File paths match client's project structure</check>
+        <check>Commands use client's build tools (Maven, npm, etc.)</check>
+        <check>Terminology matches client's domain</check>
+      </checks>
+    </lab>
+
+    <lab name="lab2">
+      <required_elements>
+        <element>Refactoring examples in client's language</element>
+        <element>Framework-specific patterns</element>
+        <element>Testing with client's test framework</element>
+        <element>Advanced features relevant to client</element>
+      </required_elements>
+      
+      <checks>
+        <check>Examples are more complex than Lab 1</check>
+        <check>Builds on Lab 1 concepts</check>
+        <check>Uses client's actual patterns and conventions</check>
+      </checks>
+    </lab>
+
+    <lab name="lab3">
+      <required_elements>
+        <element>Scenarios based on client's use cases</element>
+        <element>Real business problems from client's domain</element>
+        <element>Step-by-step Bob workflows</element>
+        <element>Success criteria for each scenario</element>
+        <element>Timing for each use case</element>
+      </required_elements>
+      
+      <checks>
+        <check>All high-priority use cases are addressed</check>
+        <check>Scenarios use client's actual codebase structure</check>
+        <check>Examples reference client's APIs/services</check>
+        <check>Total time fits within Lab 3 allocation</check>
+        <check>No generic template scenarios remain</check>
+      </checks>
+    </lab>
+
+    <general_lab_checks>
+      <check>All code examples are syntactically correct</check>
+      <check>File paths are realistic for client's project</check>
+      <check>Commands will work in client's environment</check>
+      <check>Prerequisites are achievable</check>
+      <check>Deliverables are measurable</check>
+    </general_lab_checks>
+  </lab_validation>
+
+  <schedule_validation>
+    <timing_checks>
+      <check name="total_time">
+        <description>Schedule matches configured duration</description>
+        <calculation>Sum all segment durations = total_duration_hours * 60</calculation>
+      </check>
+
+      <check name="segment_proportions">
+        <description>Time allocation is reasonable</description>
+        <guidelines>
+          <guideline>Introduction: 5-10% of total time</guideline>
+          <guideline>Basic features: 20-30% of total time</guideline>
+          <guideline>Advanced features: 15-20% of total time</guideline>
+          <guideline>Client-specific: 40-50% of total time</guideline>
+          <guideline>Wrap-up: 5-10% of total time</guideline>
+        </guidelines>
+      </check>
+
+      <check name="breaks_included">
+        <description>Adequate breaks for participant comfort</description>
+        <rule>For 6+ hours: Include lunch break (45-60 min)</rule>
+        <rule>For 3+ hours: Include at least one 10-15 min break</rule>
+      </check>
+
+      <check name="buffer_time">
+        <description>Time for questions and overruns</description>
+        <recommendation>Include 10-15% buffer in client-specific section</recommendation>
+      </check>
+    </timing_checks>
+
+    <content_checks>
+      <check>All use cases from config are addressed in schedule</check>
+      <check>Lab timing in schedule matches lab definitions</check>
+      <check>Topics align with client's priorities</check>
+      <check>Deliverables are specific and measurable</check>
+    </content_checks>
+  </schedule_validation>
+
+  <consistency_validation>
+    <cross_file_checks>
+      <check name="tech_stack_consistency">
+        <description>Technology references match across all files</description>
+        <files>
+          <file>bootcamp-config.yaml</file>
+          <file>labs/lab1-basic-operations/instructions.md</file>
+          <file>labs/lab2-advanced-workflows/instructions.md</file>
+          <file>labs/lab3-client-specific/instructions.md</file>
+        </files>
+        <validation>All code examples use same language/frameworks</validation>
+      </check>
+
+      <check name="use_case_coverage">
+        <description>All use cases are addressed in materials</description>
+        <validation>Each use case in config appears in Lab 3</validation>
+      </check>
+
+      <check name="timing_consistency">
+        <description>Time estimates match across files</description>
+        <validation>Lab durations in config match schedule</validation>
+        <validation>Use case times in config match Lab 3 scenarios</validation>
+      </check>
+
+      <check name="terminology_consistency">
+        <description>Terms and names are used consistently</description>
+        <validation>Client name is consistent</validation>
+        <validation>Product/service names are consistent</validation>
+        <validation>Technical terms are used consistently</validation>
+      </check>
+    </cross_file_checks>
+  </consistency_validation>
+
+  <quality_checks>
+    <check name="completeness">
+      <description>All sections are filled out, no TODOs remain</description>
+      <patterns_to_flag>
+        <pattern>TODO</pattern>
+        <pattern>FIXME</pattern>
+        <pattern>TBD</pattern>
+        <pattern>...</pattern>
+      </patterns_to_flag>
+    </check>
+
+    <check name="specificity">
+      <description>Examples are specific, not generic</description>
+      <bad_examples>
+        <example>Update the config file</example>
+        <example>Fix the bug</example>
+        <example>Add a function</example>
+      </bad_examples>
+      <good_examples>
+        <example>Update the timeout value in config/settings.json to 30 seconds</example>
+        <example>Fix the null pointer exception in getUserData() on line 45</example>
+        <example>Add a validateEmail() function to src/utils/validation.py</example>
+      </good_examples>
+    </check>
+
+    <check name="actionability">
+      <description>Instructions are clear and actionable</description>
+      <validation>Each exercise has specific steps</validation>
+      <validation>Success criteria are measurable</validation>
+      <validation>Examples can be executed</validation>
+    </check>
+
+    <check name="relevance">
+      <description>Content is relevant to client's needs</description>
+      <validation>Examples use client's domain terminology</validation>
+      <validation>Scenarios address real business problems</validation>
+      <validation>Tools and frameworks match client's stack</validation>
+    </check>
+  </quality_checks>
+
+  <validation_workflow>
+    <step number="1">
+      <action>Read all bootcamp files</action>
+      <files>
+        <file>bootcamp-config.yaml</file>
+        <file>labs/lab1-basic-operations/instructions.md</file>
+        <file>labs/lab2-advanced-workflows/instructions.md</file>
+        <file>labs/lab3-client-specific/instructions.md</file>
+        <file>schedule/detailed-agenda.md</file>
+      </files>
+    </step>
+
+    <step number="2">
+      <action>Run configuration validation</action>
+      <checks>
+        <check>Required fields</check>
+        <check>Consistency checks</check>
+        <check>Placeholder detection</check>
+      </checks>
+    </step>
+
+    <step number="3">
+      <action>Run lab validation</action>
+      <checks>
+        <check>Lab 1 customization</check>
+        <check>Lab 2 customization</check>
+        <check>Lab 3 client-specific scenarios</check>
+        <check>General lab quality</check>
+      </checks>
+    </step>
+
+    <step number="4">
+      <action>Run schedule validation</action>
+      <checks>
+        <check>Timing calculations</check>
+        <check>Content coverage</check>
+        <check>Break allocation</check>
+      </checks>
+    </step>
+
+    <step number="5">
+      <action>Run consistency validation</action>
+      <checks>
+        <check>Cross-file consistency</check>
+        <check>Terminology consistency</check>
+        <check>Tech stack consistency</check>
+      </checks>
+    </step>
+
+    <step number="6">
+      <action>Run quality checks</action>
+      <checks>
+        <check>Completeness</check>
+        <check>Specificity</check>
+        <check>Actionability</check>
+        <check>Relevance</check>
+      </checks>
+    </step>
+
+    <step number="7">
+      <action>Generate validation report</action>
+      <report_structure>
+        <section name="summary">
+          <item>Overall status (Ready / Needs Work)</item>
+          <item>Number of issues found</item>
+          <item>Critical issues that must be fixed</item>
+        </section>
+        <section name="findings">
+          <category>Configuration Issues</category>
+          <category>Lab Issues</category>
+          <category>Schedule Issues</category>
+          <category>Consistency Issues</category>
+          <category>Quality Issues</category>
+        </section>
+        <section name="recommendations">
+          <item>Specific fixes needed</item>
+          <item>Priority order</item>
+          <item>Estimated time to fix</item>
+        </section>
+      </report_structure>
+    </step>
+
+    <step number="8">
+      <action>Offer to fix issues</action>
+      <ask_followup_question>
+        <question>I found [X] issues that need attention. Would you like me to fix them?</question>
+        <follow_up>
+          <suggest>Yes, fix all issues automatically</suggest>
+          <suggest>Show me the issues first, then I'll decide</suggest>
+          <suggest>Fix only the critical issues</suggest>
+          <suggest>I'll fix them manually</suggest>
+        </follow_up>
+      </ask_followup_question>
+    </step>
+  </validation_workflow>
+
+  <error_messages>
+    <error type="missing_required_field">
+      <message>Required field '{field_name}' is missing or empty in {file_name}</message>
+      <action>Ask user to provide the value</action>
+    </error>
+
+    <error type="placeholder_found">
+      <message>Template placeholder '{placeholder}' found in {file_name}</message>
+      <action>Ask user to provide specific value</action>
+    </error>
+
+    <error type="timing_mismatch">
+      <message>Timing doesn't add up: {calculation} ≠ {expected}</message>
+      <action>Recalculate and fix timing</action>
+    </error>
+
+    <error type="tech_stack_mismatch">
+      <message>Lab uses {found_tech} but config specifies {expected_tech}</message>
+      <action>Update lab to use correct tech stack</action>
+    </error>
+
+    <error type="use_case_not_addressed">
+      <message>Use case '{use_case_name}' from config not found in Lab 3</message>
+      <action>Add scenario for this use case</action>
+    </error>
+  </error_messages>
+</validation_rules>
+
+<!-- Made with Bob -->

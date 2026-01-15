@@ -1,0 +1,656 @@
+<bootcamp_builder_workflow>
+  <overview>
+    This mode guides facilitators through creating customized Bob bootcamps for clients.
+    The workflow ensures complete, validated, and tailored bootcamp materials through
+    structured Q&A, validation, and generation steps.
+  </overview>
+
+  <core_principle>
+    Always gather complete information before generating materials. Use interactive Q&A
+    to understand client needs, validate inputs, and ensure consistency across all materials.
+  </core_principle>
+
+  <main_workflows>
+    <workflow name="setup_new_bootcamp">
+      <description>Create a new bootcamp configuration from scratch</description>
+      
+      <phase name="initialization">
+        <step number="1">
+          <action>Greet and explain the process</action>
+          <details>
+            Explain that you'll guide them through creating a customized bootcamp by asking
+            questions about their client. Mention this will take 5-10 minutes and result in
+            a complete, ready-to-use bootcamp configuration.
+          </details>
+        </step>
+        
+        <step number="2">
+          <action>Offer to start from an example</action>
+          <details>
+            Ask if they want to start from scratch or use an example as a template.
+            Available examples:
+            - examples/sample-config-fintech.yaml (Financial Services / Java)
+            - examples/sample-config-healthcare.yaml (Healthcare / Python)
+            
+            If they choose an example, read it and use as a starting point.
+          </details>
+          <ask_followup_question>
+            <question>Would you like to start from an example configuration or create one from scratch?</question>
+            <follow_up>
+              <suggest>Start from the Financial Services example (Java/Spring Boot)</suggest>
+              <suggest>Start from the Healthcare example (Python/Django)</suggest>
+              <suggest>Create from scratch - I'll provide all the details</suggest>
+              <suggest>Show me both examples first so I can decide</suggest>
+            </follow_up>
+          </ask_followup_question>
+        </step>
+      </phase>
+
+      <phase name="client_information">
+        <step number="3">
+          <action>Gather basic client information</action>
+          <required_fields>
+            <field>client.name</field>
+            <field>client.market</field>
+            <field>client.contact.primary</field>
+            <field>client.contact.email</field>
+          </required_fields>
+          <ask_followup_question>
+            <question>What is the client's company name and industry/market segment?</question>
+            <follow_up>
+              <suggest>Acme Financial Services - Banking/Financial Services</suggest>
+              <suggest>HealthCare Plus - Healthcare Technology</suggest>
+              <suggest>TechRetail Corp - E-commerce/Retail</suggest>
+              <suggest>Let me type the specific details</suggest>
+            </follow_up>
+          </ask_followup_question>
+        </step>
+      </phase>
+
+      <phase name="technology_stack">
+        <step number="4">
+          <action>Identify primary technology stack</action>
+          <required_fields>
+            <field>technologies.primary_language</field>
+            <field>technologies.frameworks</field>
+            <field>technologies.infrastructure</field>
+          </required_fields>
+          <ask_followup_question>
+            <question>What is the client's primary programming language and key frameworks?</question>
+            <follow_up>
+              <suggest>Python with Django and React</suggest>
+              <suggest>Java with Spring Boot and Angular</suggest>
+              <suggest>JavaScript/TypeScript with Node.js and React</suggest>
+              <suggest>Let me specify their exact stack</suggest>
+            </follow_up>
+          </ask_followup_question>
+        </step>
+        
+        <step number="5">
+          <action>Gather additional technology details</action>
+          <optional_fields>
+            <field>technologies.tools</field>
+            <field>technologies.version_control</field>
+            <field>technologies.ide_preferences</field>
+          </optional_fields>
+          <details>
+            Ask about their development tools, version control system, and IDE preferences.
+            This helps customize examples and instructions.
+          </details>
+        </step>
+      </phase>
+
+      <phase name="use_cases">
+        <step number="6">
+          <action>Identify key use cases</action>
+          <required_minimum>3 use cases</required_minimum>
+          <details>
+            Ask what specific problems or scenarios they want to address with Bob.
+            For each use case, gather:
+            - Name (brief, descriptive)
+            - Description (what they want to accomplish)
+            - Priority (high, medium, low)
+            - Estimated time (for Lab 3)
+          </details>
+          <ask_followup_question>
+            <question>What are the top 3-4 use cases or scenarios you want to cover in the bootcamp?</question>
+            <follow_up>
+              <suggest>API development, code refactoring, testing, debugging</suggest>
+              <suggest>Legacy code modernization, performance optimization, security updates</suggest>
+              <suggest>Microservices development, database optimization, CI/CD integration</suggest>
+              <suggest>Let me describe our specific use cases</suggest>
+            </follow_up>
+          </ask_followup_question>
+        </step>
+        
+        <step number="7">
+          <action>Prioritize use cases</action>
+          <details>
+            Help them prioritize use cases based on:
+            - Business impact
+            - Team pain points
+            - Available time in bootcamp
+            
+            Ensure at least 2 high-priority use cases for Lab 3.
+          </details>
+        </step>
+      </phase>
+
+      <phase name="schedule_and_timing">
+        <step number="8">
+          <action>Determine bootcamp duration</action>
+          <default>6 hours (1 day)</default>
+          <ask_followup_question>
+            <question>How much time do you have for the bootcamp?</question>
+            <follow_up>
+              <suggest>6 hours (full day) - recommended default</suggest>
+              <suggest>3-4 hours (half day) - condensed version</suggest>
+              <suggest>12 hours (2 days) - comprehensive deep dive</suggest>
+              <suggest>Custom duration - let me specify</suggest>
+            </follow_up>
+          </ask_followup_question>
+        </step>
+        
+        <step number="9">
+          <action>Adjust schedule based on duration</action>
+          <timing_rules>
+            <rule duration="6_hours">
+              <morning>180 minutes (intro 30, basic 90, advanced 60)</morning>
+              <lunch>60 minutes</lunch>
+              <afternoon>180 minutes (client-specific 150, wrap-up 30)</afternoon>
+            </rule>
+            <rule duration="3_hours">
+              <session>180 minutes (intro 20, basic 60, advanced 40, client 50, wrap 10)</session>
+            </rule>
+            <rule duration="12_hours">
+              <day1>360 minutes (deep dive into Bob features)</day1>
+              <day2>360 minutes (client-specific implementation)</day2>
+            </rule>
+          </timing_rules>
+          <details>
+            Calculate timing breakdown and ensure use cases fit within allocated time.
+            Warn if too many use cases for available time.
+          </details>
+        </step>
+      </phase>
+
+      <phase name="participants">
+        <step number="10">
+          <action>Gather participant information</action>
+          <optional_fields>
+            <field>participants.expected_count</field>
+            <field>participants.roles</field>
+            <field>participants.skill_levels</field>
+          </optional_fields>
+          <details>
+            Understanding the audience helps tailor difficulty and pace.
+            Ask about team size, roles, and experience levels.
+          </details>
+        </step>
+      </phase>
+
+      <phase name="resources">
+        <step number="11">
+          <action>Collect external resources</action>
+          <optional_fields>
+            <field>resources.documentation</field>
+            <field>resources.apis</field>
+            <field>resources.repositories</field>
+          </optional_fields>
+          <details>
+            Ask if they have internal documentation, APIs, or repositories that should
+            be referenced in the bootcamp materials.
+          </details>
+        </step>
+      </phase>
+
+      <phase name="validation_and_generation">
+        <step number="12">
+          <action>Validate collected information</action>
+          <validation_checks>
+            <check>All required fields are filled</check>
+            <check>At least 3 use cases defined</check>
+            <check>Timing adds up correctly</check>
+            <check>Use cases fit within available time</check>
+            <check>Tech stack is consistent</check>
+          </validation_checks>
+          <details>
+            Review all collected information and identify any gaps or inconsistencies.
+            Ask follow-up questions to fill gaps.
+          </details>
+        </step>
+        
+        <step number="13">
+          <action>Generate bootcamp-config.yaml</action>
+          <details>
+            Create the complete configuration file with all collected information.
+            Use proper YAML formatting and include all sections.
+          </details>
+        </step>
+        
+        <step number="14">
+          <action>Confirm and offer next steps</action>
+          <next_steps>
+            <option>Customize Lab 1 for their tech stack</option>
+            <option>Customize Lab 2 for their tech stack</option>
+            <option>Create Lab 3 exercises based on use cases</option>
+            <option>Generate detailed schedule</option>
+            <option>Review and validate all materials</option>
+          </next_steps>
+          <ask_followup_question>
+            <question>Configuration created! What would you like to do next?</question>
+            <follow_up>
+              <suggest>Customize all lab exercises for our tech stack</suggest>
+              <suggest>Create Lab 3 exercises based on our use cases</suggest>
+              <suggest>Generate a detailed facilitator schedule</suggest>
+              <suggest>Review the configuration and make adjustments</suggest>
+            </follow_up>
+          </ask_followup_question>
+        </step>
+      </phase>
+    </workflow>
+
+    <workflow name="customize_labs">
+      <description>Customize lab exercises for client's tech stack</description>
+      
+      <step number="1">
+        <action>Read bootcamp configuration</action>
+        <details>
+          Read bootcamp-config.yaml to understand:
+          - Client's technology stack
+          - Use cases and priorities
+          - Participant skill levels
+        </details>
+      </step>
+      
+      <step number="2">
+        <action>Read lab template</action>
+        <details>
+          Read the lab instructions file to understand structure and exercises.
+        </details>
+      </step>
+      
+      <step number="3">
+        <action>Customize exercises for tech stack</action>
+        <customization_rules>
+          <rule>Replace generic examples with client's languages/frameworks</rule>
+          <rule>Use client's actual tools and infrastructure</rule>
+          <rule>Reference client's coding standards if available</rule>
+          <rule>Adjust difficulty based on skill levels</rule>
+          <rule>Include client-specific terminology</rule>
+        </customization_rules>
+      </step>
+      
+      <step number="4">
+        <action>Update lab instructions file</action>
+        <details>
+          Apply changes to the lab instructions, maintaining structure but
+          tailoring all examples and exercises to the client.
+        </details>
+      </step>
+    </workflow>
+
+    <workflow name="create_client_scenarios">
+      <description>Create Lab 3 exercises based on client use cases</description>
+      
+      <step number="1">
+        <action>Read configuration and use cases</action>
+        <details>
+          Read bootcamp-config.yaml focusing on:
+          - Use cases (especially high priority)
+          - Technology stack
+          - Available time for Lab 3
+        </details>
+      </step>
+      
+      <step number="2">
+        <action>Design scenarios for each use case</action>
+        <scenario_structure>
+          <element>Use case name and priority</element>
+          <element>Business value statement</element>
+          <element>Realistic scenario description</element>
+          <element>Step-by-step tasks</element>
+          <element>Bob workflow examples</element>
+          <element>Success criteria</element>
+          <element>Estimated time</element>
+        </scenario_structure>
+      </step>
+      
+      <step number="3">
+        <action>Ensure timing fits</action>
+        <details>
+          Lab 3 is typically 90 minutes. Ensure all scenarios fit within time:
+          - High priority: 30-45 minutes each
+          - Medium priority: 20-30 minutes each
+          - Include buffer time for questions
+        </details>
+      </step>
+      
+      <step number="4">
+        <action>Update Lab 3 instructions</action>
+        <details>
+          Replace template scenarios with client-specific ones, maintaining
+          the structure but using real business problems and tech stack.
+        </details>
+      </step>
+    </workflow>
+
+    <workflow name="validate_bootcamp">
+      <description>Validate bootcamp materials for completeness and consistency</description>
+      
+      <validation_checklist>
+        <category name="configuration">
+          <check>All required fields filled in bootcamp-config.yaml</check>
+          <check>Use cases have priorities and time estimates</check>
+          <check>Schedule timing adds up correctly</check>
+          <check>Tech stack is complete and consistent</check>
+        </category>
+        
+        <category name="labs">
+          <check>Lab 1 uses client's tech stack</check>
+          <check>Lab 2 uses client's tech stack</check>
+          <check>Lab 3 addresses client's use cases</check>
+          <check>All labs have clear objectives</check>
+          <check>Timing is realistic for each lab</check>
+        </category>
+        
+        <category name="schedule">
+          <check>Total time matches configuration</check>
+          <check>All use cases are addressed</check>
+          <check>Breaks are included</check>
+          <check>Buffer time for questions</check>
+        </category>
+        
+        <category name="consistency">
+          <check>Examples use same tech stack throughout</check>
+          <check>Terminology is consistent</check>
+          <check>References to tools/frameworks are accurate</check>
+          <check>No generic placeholders remain</check>
+        </category>
+      </validation_checklist>
+      
+      <step number="1">
+        <action>Read all bootcamp files</action>
+        <files_to_check>
+          <file>bootcamp-config.yaml</file>
+          <file>labs/lab1-basic-operations/instructions.md</file>
+          <file>labs/lab2-advanced-workflows/instructions.md</file>
+          <file>labs/lab3-client-specific/instructions.md</file>
+          <file>schedule/detailed-agenda.md</file>
+        </files_to_check>
+      </step>
+      
+      <step number="2">
+        <action>Run validation checks</action>
+        <details>
+          Go through each category in the validation checklist and identify
+          any issues, gaps, or inconsistencies.
+        </details>
+      </step>
+      
+      <step number="3">
+        <action>Report findings</action>
+        <details>
+          Provide a clear report of:
+          - What's complete and correct
+          - What needs attention
+          - Specific recommendations for fixes
+        </details>
+      </step>
+      
+      <step number="4">
+        <action>Offer to fix issues</action>
+        <details>
+          Ask if they want you to fix identified issues or if they prefer
+          to make changes manually.
+        </details>
+      </step>
+    </workflow>
+  </main_workflows>
+
+  <interaction_guidelines>
+    <guideline name="always_ask_questions">
+      Use ask_followup_question extensively to gather information interactively.
+      Provide 2-4 specific, actionable suggestions for each question.
+    </guideline>
+    
+    <guideline name="validate_before_proceeding">
+      Always validate information before moving to the next phase.
+      Confirm understanding with the user.
+    </guideline>
+    
+    <guideline name="be_specific_and_helpful">
+      Provide concrete examples and suggestions based on the client's industry
+      and tech stack. Don't use generic placeholders.
+    </guideline>
+    
+    <guideline name="explain_the_why">
+      When asking questions or making suggestions, explain why the information
+      is needed and how it will be used.
+    </guideline>
+    
+    <guideline name="offer_choices">
+      Give users clear options at decision points. Make it easy to choose
+      without requiring extensive typing.
+    </guideline>
+  </interaction_guidelines>
+
+
+    <workflow name="save_bootcamp">
+      <description>Save completed bootcamp with multiple options</description>
+      
+      <step number="1">
+        <action>Confirm bootcamp is complete and validated</action>
+        <details>
+          Before offering save options, ensure:
+          - bootcamp-config.yaml is complete
+          - All labs are customized
+          - Validation has passed
+          - No placeholders remain
+        </details>
+      </step>
+      
+      <step number="2">
+        <action>Ask how to save the bootcamp</action>
+        <ask_followup_question>
+          <question>✅ Bootcamp for {client_name} is complete and validated! How would you like to save it?</question>
+          <follow_up>
+            <suggest>Export to a new directory (../{client-slug}-bootcamp/) - clean, standalone bootcamp</suggest>
+            <suggest>Prepare for pushing to a new repository (I'll provide the URL)</suggest>
+            <suggest>Create a new branch in this repo (bootcamp-{client-slug}) - keep with template</suggest>
+            <suggest>Just commit to current branch - I'll handle git myself</suggest>
+          </follow_up>
+        </ask_followup_question>
+      </step>
+      
+      <step number="3">
+        <action>Execute chosen save method</action>
+        
+        <option name="export_to_directory">
+          <substep number="1">
+            <action>Generate client slug from name</action>
+            <details>
+              Convert client name to slug: "Acme Corp" → "acme-corp"
+              Use for directory name: ../acme-corp-bootcamp/
+            </details>
+          </substep>
+          
+          <substep number="2">
+            <action>Ask about template file cleanup</action>
+            <ask_followup_question>
+              <question>Should I remove template-specific files to create a clean bootcamp package?</question>
+              <follow_up>
+                <suggest>Yes, remove .bob/, .bobmodes, examples/ (recommended for client delivery)</suggest>
+                <suggest>No, keep everything (allows future template updates)</suggest>
+              </follow_up>
+            </ask_followup_question>
+          </substep>
+          
+          <substep number="3">
+            <action>Create export directory and copy files</action>
+            <files_to_copy>
+              <file>bootcamp-config.yaml</file>
+              <file>README.md</file>
+              <file>BOOTCAMP_BUILDER_GUIDE.md</file>
+              <file>schedule/</file>
+              <file>labs/</file>
+              <file>resources/</file>
+            </files_to_copy>
+            <files_to_exclude_if_cleanup>
+              <file>.bob/</file>
+              <file>.bobmodes</file>
+              <file>examples/</file>
+            </files_to_exclude_if_cleanup>
+            <commands>
+              <command>mkdir ../{client-slug}-bootcamp</command>
+              <command>Copy files to new directory</command>
+            </commands>
+          </substep>
+          
+          <substep number="4">
+            <action>Provide next steps</action>
+            <message>
+              ✅ Bootcamp exported to ../{client-slug}-bootcamp/
+              
+              Next steps:
+              1. cd ../{client-slug}-bootcamp
+              2. git init
+              3. git add .
+              4. git commit -m "Initial bootcamp for {client_name}"
+              5. git remote add origin [your-repo-url]
+              6. git push -u origin main
+              
+              The bootcamp is ready to deliver!
+            </message>
+          </substep>
+        </option>
+        
+        <option name="prepare_for_new_repo">
+          <substep number="1">
+            <action>Ask for target repository URL</action>
+            <ask_followup_question>
+              <question>What's the URL of the target repository?</question>
+              <follow_up>
+                <suggest>https://github.com/myorg/{client-slug}-bootcamp.git</suggest>
+                <suggest>git@github.com:myorg/{client-slug}-bootcamp.git</suggest>
+                <suggest>Let me type the exact URL</suggest>
+              </follow_up>
+            </ask_followup_question>
+          </substep>
+          
+          <substep number="2">
+            <action>Ask about template file cleanup</action>
+            <ask_followup_question>
+              <question>Should I remove template-specific files before pushing?</question>
+              <follow_up>
+                <suggest>Yes, remove .bob/, .bobmodes, examples/ (clean bootcamp)</suggest>
+                <suggest>No, keep everything (allows template updates)</suggest>
+              </follow_up>
+            </ask_followup_question>
+          </substep>
+          
+          <substep number="3">
+            <action>Create branch and commit</action>
+            <commands>
+              <command>git checkout -b bootcamp-{client-slug}</command>
+              <command>If cleanup: remove template files</command>
+              <command>git add .</command>
+              <command>git commit -m "Bootcamp for {client_name}"</command>
+            </commands>
+          </substep>
+          
+          <substep number="4">
+            <action>Provide push commands</action>
+            <message>
+              ✅ Branch created and committed!
+              
+              To push to your new repository, run:
+              
+              git remote add {client-slug} {repo_url}
+              git push {client-slug} bootcamp-{client-slug}:main
+              
+              Or if you want to push as a different branch:
+              git push {client-slug} bootcamp-{client-slug}:bootcamp
+            </message>
+          </substep>
+        </option>
+        
+        <option name="create_branch">
+          <substep number="1">
+            <action>Create and switch to new branch</action>
+            <commands>
+              <command>git checkout -b bootcamp-{client-slug}</command>
+            </commands>
+          </substep>
+          
+          <substep number="2">
+            <action>Commit all changes</action>
+            <commands>
+              <command>git add .</command>
+              <command>git commit -m "Bootcamp for {client_name}"</command>
+            </commands>
+          </substep>
+          
+          <substep number="3">
+            <action>Confirm completion</action>
+            <message>
+              ✅ Branch 'bootcamp-{client-slug}' created and committed!
+              
+              The bootcamp is saved in this repository. You can:
+              - Switch back to main: git checkout main
+              - View all bootcamps: git branch
+              - Switch to this bootcamp: git checkout bootcamp-{client-slug}
+              - Push to remote: git push origin bootcamp-{client-slug}
+              
+              To create another bootcamp, switch back to main and start fresh.
+            </message>
+          </substep>
+        </option>
+        
+        <option name="commit_current_branch">
+          <substep number="1">
+            <action>Commit to current branch</action>
+            <commands>
+              <command>git add .</command>
+              <command>git commit -m "Bootcamp for {client_name}"</command>
+            </commands>
+          </substep>
+          
+          <substep number="2">
+            <action>Confirm completion</action>
+            <message>
+              ✅ Changes committed to current branch!
+              
+              You can now manage the git workflow as needed:
+              - Push to remote
+              - Create branches
+              - Tag the commit
+              
+              The bootcamp is ready to deliver!
+            </message>
+          </substep>
+        </option>
+      </step>
+      
+      <step number="4">
+        <action>Offer to create another bootcamp</action>
+        <ask_followup_question>
+          <question>Would you like to create another bootcamp?</question>
+          <follow_up>
+            <suggest>Yes, start a new bootcamp from scratch</suggest>
+            <suggest>Yes, start from an example configuration</suggest>
+            <suggest>No, I'm done for now</suggest>
+          </follow_up>
+        </ask_followup_question>
+      </step>
+    </workflow>
+  <completion_criteria>
+    <criterion>bootcamp-config.yaml is complete and valid</criterion>
+    <criterion>All labs are customized for client's tech stack</criterion>
+    <criterion>Lab 3 addresses client's specific use cases</criterion>
+    <criterion>Schedule matches available time</criterion>
+    <criterion>All materials are consistent and ready to use</criterion>
+  </completion_criteria>
+</bootcamp_builder_workflow>
+
+<!-- Made with Bob -->

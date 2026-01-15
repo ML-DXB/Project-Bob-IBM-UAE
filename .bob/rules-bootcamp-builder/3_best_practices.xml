@@ -1,0 +1,393 @@
+<best_practices>
+  <overview>
+    Best practices for creating high-quality, effective bootcamp materials that
+    deliver value to clients and ensure successful learning outcomes.
+  </overview>
+
+  <interaction_principles>
+    <principle name="conversational_guidance">
+      <description>Guide users through a conversational Q&A process</description>
+      <guidelines>
+        <guideline>Ask one question at a time</guideline>
+        <guideline>Provide 2-4 specific, actionable suggestions</guideline>
+        <guideline>Explain why information is needed</guideline>
+        <guideline>Confirm understanding before proceeding</guideline>
+        <guideline>Make it easy to choose without extensive typing</guideline>
+      </guidelines>
+      <example>
+        <good>
+          <ask_followup_question>
+            <question>What is the client's primary programming language and key frameworks?</question>
+            <follow_up>
+              <suggest>Python with Django and React</suggest>
+              <suggest>Java with Spring Boot and Angular</suggest>
+              <suggest>JavaScript/TypeScript with Node.js and React</suggest>
+              <suggest>Let me specify their exact stack</suggest>
+            </follow_up>
+          </ask_followup_question>
+        </good>
+        <bad>
+          "What technologies does the client use?" (too vague, no suggestions)
+        </bad>
+      </example>
+    </principle>
+
+    <principle name="validate_early_and_often">
+      <description>Validate information as it's collected, not at the end</description>
+      <guidelines>
+        <guideline>Check for completeness after each phase</guideline>
+        <guideline>Identify gaps immediately</guideline>
+        <guideline>Confirm understanding with user</guideline>
+        <guideline>Fix issues before moving forward</guideline>
+      </guidelines>
+    </principle>
+
+    <principle name="provide_context">
+      <description>Help users understand the purpose of each question</description>
+      <guidelines>
+        <guideline>Explain how information will be used</guideline>
+        <guideline>Show examples from similar clients</guideline>
+        <guideline>Clarify impact on bootcamp materials</guideline>
+      </guidelines>
+      <example>
+        "I need to know your tech stack so I can customize all lab exercises with examples in your programming language and frameworks. This ensures participants practice with tools they actually use."
+      </example>
+    </principle>
+
+    <principle name="offer_smart_defaults">
+      <description>Suggest reasonable defaults based on common patterns</description>
+      <guidelines>
+        <guideline>Default to 6-hour format (most common)</guideline>
+        <guideline>Suggest 3-4 use cases (optimal for time)</guideline>
+        <guideline>Recommend 2 high-priority use cases minimum</guideline>
+        <guideline>Allocate 40-50% of time to client-specific work</guideline>
+      </guidelines>
+    </principle>
+
+    <principle name="progressive_disclosure">
+      <description>Start with essential information, add details progressively</description>
+      <guidelines>
+        <guideline>Required fields first, optional fields later</guideline>
+        <guideline>Core use cases before edge cases</guideline>
+        <guideline>Basic tech stack before detailed tools</guideline>
+      </guidelines>
+    </principle>
+  </interaction_principles>
+
+  <customization_principles>
+    <principle name="always_be_specific">
+      <description>Never use generic examples - always tailor to client</description>
+      <guidelines>
+        <guideline>Use client's actual programming language</guideline>
+        <guideline>Reference client's frameworks and tools</guideline>
+        <guideline>Include client's domain terminology</guideline>
+        <guideline>Use realistic file paths for their project structure</guideline>
+      </guidelines>
+      <examples>
+        <bad>
+          "Update the config file"
+          "Fix the bug in the code"
+          "Add a new function"
+        </bad>
+        <good>
+          "Update the timeout value in config/settings.py to 30 seconds"
+          "Fix the NullPointerException in PaymentService.processPayment() on line 145"
+          "Add a validateEmail() function to src/utils/validators.ts"
+        </good>
+      </examples>
+    </principle>
+
+    <principle name="match_skill_levels">
+      <description>Adjust complexity based on participant experience</description>
+      <guidelines>
+        <guideline>More juniors → slower pace, more explanation, simpler examples</guideline>
+        <guideline>More seniors → faster pace, advanced topics, complex scenarios</guideline>
+        <guideline>Mixed levels → provide optional advanced content</guideline>
+      </guidelines>
+    </principle>
+
+    <principle name="respect_time_constraints">
+      <description>Ensure content fits within available time</description>
+      <guidelines>
+        <guideline>Calculate realistic timing for each exercise</guideline>
+        <guideline>Include buffer time for questions (10-15%)</guideline>
+        <guideline>Prioritize high-value use cases if time is limited</guideline>
+        <guideline>Suggest what to skip or do as homework if needed</guideline>
+      </guidelines>
+    </principle>
+
+    <principle name="use_real_problems">
+      <description>Base Lab 3 on actual business problems</description>
+      <guidelines>
+        <guideline>Reference real pain points from client</guideline>
+        <guideline>Use actual APIs, services, or systems</guideline>
+        <guideline>Include realistic data and scenarios</guideline>
+        <guideline>Demonstrate tangible business value</guideline>
+      </guidelines>
+    </principle>
+
+    <principle name="maintain_consistency">
+      <description>Ensure consistency across all materials</description>
+      <guidelines>
+        <guideline>Same tech stack in all labs</guideline>
+        <guideline>Consistent terminology throughout</guideline>
+        <guideline>Matching file paths and structure</guideline>
+        <guideline>Aligned timing across config and schedule</guideline>
+      </guidelines>
+    </principle>
+  </customization_principles>
+
+  <content_quality_principles>
+    <principle name="clear_objectives">
+      <description>Every exercise must have clear, measurable objectives</description>
+      <guidelines>
+        <guideline>State what participants will learn</guideline>
+        <guideline>Define success criteria</guideline>
+        <guideline>Make outcomes measurable</guideline>
+      </guidelines>
+      <example>
+        <good>
+          "By the end of this exercise, you will be able to:
+          - Use apply_diff to make precise code changes
+          - Refactor a function without breaking tests
+          - Add proper error handling to API endpoints"
+        </good>
+        <bad>
+          "Learn about code editing" (too vague)
+        </bad>
+      </example>
+    </principle>
+
+    <principle name="actionable_instructions">
+      <description>Instructions must be clear and actionable</description>
+      <guidelines>
+        <guideline>Use specific verbs (read, update, add, fix)</guideline>
+        <guideline>Include exact file paths</guideline>
+        <guideline>Specify line numbers when relevant</guideline>
+        <guideline>Provide expected outcomes</guideline>
+      </guidelines>
+    </principle>
+
+    <principle name="realistic_examples">
+      <description>Examples must be executable and realistic</description>
+      <guidelines>
+        <guideline>Code examples are syntactically correct</guideline>
+        <guideline>File paths exist in typical projects</guideline>
+        <guideline>Commands will work in client's environment</guideline>
+        <guideline>Data is realistic for the domain</guideline>
+      </guidelines>
+    </principle>
+
+    <principle name="progressive_difficulty">
+      <description>Build complexity gradually across labs</description>
+      <guidelines>
+        <guideline>Lab 1: Basic operations, single files</guideline>
+        <guideline>Lab 2: Complex workflows, multiple files</guideline>
+        <guideline>Lab 3: Real business problems, full scenarios</guideline>
+      </guidelines>
+    </principle>
+
+    <principle name="include_bob_workflows">
+      <description>Show how to use Bob effectively for each task</description>
+      <guidelines>
+        <guideline>Provide example prompts</guideline>
+        <guideline>Show step-by-step Bob interactions</guideline>
+        <guideline>Explain tool selection rationale</guideline>
+        <guideline>Include best practices for prompting</guideline>
+      </guidelines>
+    </principle>
+  </content_quality_principles>
+
+  <timing_principles>
+    <principle name="realistic_estimates">
+      <description>Time estimates must be achievable</description>
+      <guidelines>
+        <guideline>Lab 1: 20-40 minutes (typically 30)</guideline>
+        <guideline>Lab 2: 20-40 minutes (typically 30)</guideline>
+        <guideline>Lab 3: 60-120 minutes (typically 90)</guideline>
+        <guideline>Include time for questions and troubleshooting</guideline>
+      </guidelines>
+    </principle>
+
+    <principle name="buffer_time">
+      <description>Always include buffer for overruns and questions</description>
+      <guidelines>
+        <guideline>Add 10-15% buffer to client-specific section</guideline>
+        <guideline>Allow time for setup and transitions</guideline>
+        <guideline>Plan for troubleshooting delays</guideline>
+      </guidelines>
+    </principle>
+
+    <principle name="break_allocation">
+      <description>Include adequate breaks for participant comfort</description>
+      <guidelines>
+        <guideline>6+ hours: 45-60 minute lunch break</guideline>
+        <guideline>3+ hours: At least one 10-15 minute break</guideline>
+        <guideline>Every 90 minutes: Short break or transition</guideline>
+      </guidelines>
+    </principle>
+
+    <principle name="priority_based_allocation">
+      <description>Allocate more time to high-priority use cases</description>
+      <guidelines>
+        <guideline>High priority: 30-45 minutes each</guideline>
+        <guideline>Medium priority: 20-30 minutes each</guideline>
+        <guideline>Low priority: 10-20 minutes or skip if time limited</guideline>
+      </guidelines>
+    </principle>
+  </timing_principles>
+
+  <industry_specific_considerations>
+    <industry name="financial_services">
+      <considerations>
+        <consideration>Emphasize security and compliance (PCI-DSS, SOC2)</consideration>
+        <consideration>Include audit logging examples</consideration>
+        <consideration>Use financial terminology (transactions, accounts, payments)</consideration>
+        <consideration>Address data encryption requirements</consideration>
+        <consideration>Consider regulatory constraints</consideration>
+      </considerations>
+    </industry>
+
+    <industry name="healthcare">
+      <considerations>
+        <consideration>Emphasize HIPAA compliance</consideration>
+        <consideration>Include PHI handling examples</consideration>
+        <consideration>Use healthcare terminology (patients, providers, encounters)</consideration>
+        <consideration>Address interoperability (FHIR, HL7)</consideration>
+        <consideration>Consider clinical workflows</consideration>
+      </considerations>
+    </industry>
+
+    <industry name="ecommerce">
+      <considerations>
+        <consideration>Focus on scalability and performance</consideration>
+        <consideration>Include inventory and order management</consideration>
+        <consideration>Use retail terminology (products, carts, checkout)</consideration>
+        <consideration>Address payment processing</consideration>
+        <consideration>Consider customer experience</consideration>
+      </considerations>
+    </industry>
+
+    <industry name="saas">
+      <considerations>
+        <consideration>Emphasize multi-tenancy patterns</consideration>
+        <consideration>Include subscription management</consideration>
+        <consideration>Use SaaS terminology (tenants, plans, billing)</consideration>
+        <consideration>Address API design and versioning</consideration>
+        <consideration>Consider scalability and monitoring</consideration>
+      </considerations>
+    </industry>
+  </industry_specific_considerations>
+
+  <common_pitfalls>
+    <pitfall name="generic_examples">
+      <description>Using generic examples instead of client-specific ones</description>
+      <impact>Participants can't relate to examples, reduced engagement</impact>
+      <solution>Always customize examples to client's tech stack and domain</solution>
+    </pitfall>
+
+    <pitfall name="unrealistic_timing">
+      <description>Underestimating time needed for exercises</description>
+      <impact>Rushed exercises, incomplete learning, frustrated participants</impact>
+      <solution>Use realistic estimates, include buffer time, prioritize ruthlessly</solution>
+    </pitfall>
+
+    <pitfall name="too_many_use_cases">
+      <description>Trying to cover too many use cases in limited time</description>
+      <impact>Superficial coverage, no depth, participants overwhelmed</impact>
+      <solution>Focus on 2-3 high-priority use cases, do them well</solution>
+    </pitfall>
+
+    <pitfall name="inconsistent_tech_stack">
+      <description>Using different languages/frameworks across labs</description>
+      <impact>Confusion, reduced learning transfer, wasted time</impact>
+      <solution>Validate tech stack consistency across all materials</solution>
+    </pitfall>
+
+    <pitfall name="missing_validation">
+      <description>Not validating materials before delivery</description>
+      <impact>Errors discovered during bootcamp, lost credibility</impact>
+      <solution>Always run full validation before marking complete</solution>
+    </pitfall>
+
+    <pitfall name="placeholder_content">
+      <description>Leaving template placeholders in final materials</description>
+      <impact>Unprofessional, confusing, requires manual fixes</impact>
+      <solution>Scan for placeholders, ensure all are replaced</solution>
+    </pitfall>
+  </common_pitfalls>
+
+  <success_factors>
+    <factor name="thorough_discovery">
+      <description>Gather complete information upfront</description>
+      <actions>
+        <action>Ask all necessary questions</action>
+        <action>Understand client's context fully</action>
+        <action>Clarify ambiguities immediately</action>
+      </actions>
+    </factor>
+
+    <factor name="client_focus">
+      <description>Keep client's needs at the center</description>
+      <actions>
+        <action>Use their terminology</action>
+        <action>Address their pain points</action>
+        <action>Demonstrate value in their context</action>
+      </actions>
+    </factor>
+
+    <factor name="quality_assurance">
+      <description>Validate thoroughly before delivery</description>
+      <actions>
+        <action>Run all validation checks</action>
+        <action>Test examples for correctness</action>
+        <action>Verify consistency across files</action>
+      </actions>
+    </factor>
+
+    <factor name="clear_communication">
+      <description>Communicate clearly throughout process</description>
+      <actions>
+        <action>Explain what you're doing and why</action>
+        <action>Confirm understanding at each step</action>
+        <action>Provide clear next steps</action>
+      </actions>
+    </factor>
+
+    <factor name="iterative_refinement">
+      <description>Refine based on feedback</description>
+      <actions>
+        <action>Ask for feedback on generated content</action>
+        <action>Make adjustments as needed</action>
+        <action>Validate changes</action>
+      </actions>
+    </factor>
+  </success_factors>
+
+  <quality_checklist>
+    <category name="before_starting">
+      <item>Understand the client's industry and context</item>
+      <item>Review similar example configurations</item>
+      <item>Prepare questions to ask</item>
+    </category>
+
+    <category name="during_creation">
+      <item>Ask clear, specific questions</item>
+      <item>Validate information as collected</item>
+      <item>Use client's terminology consistently</item>
+      <item>Customize all examples to their stack</item>
+      <item>Check timing calculations</item>
+    </category>
+
+    <category name="before_completion">
+      <item>Run full validation suite</item>
+      <item>Verify no placeholders remain</item>
+      <item>Check tech stack consistency</item>
+      <item>Confirm all use cases addressed</item>
+      <item>Validate timing is realistic</item>
+      <item>Review for quality and completeness</item>
+    </category>
+  </quality_checklist>
+</best_practices>
+
+<!-- Made with Bob -->

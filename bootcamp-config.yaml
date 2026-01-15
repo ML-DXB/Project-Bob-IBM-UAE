@@ -1,0 +1,304 @@
+# Bob Client Bootcamp Configuration Template
+# This file contains all the information Bob needs to understand and deliver a customized bootcamp
+
+# =============================================================================
+# CLIENT INFORMATION
+# =============================================================================
+client:
+  name: "[Client Company Name]"
+  market: "[Industry/Market Segment - e.g., Financial Services, Healthcare, Retail]"
+  contact:
+    primary: "[Primary Contact Name]"
+    email: "[contact@client.com]"
+  
+# =============================================================================
+# TECHNICAL ENVIRONMENT
+# =============================================================================
+technologies:
+  primary_language: "[e.g., Python, JavaScript, Java, C#, Go]"
+  frameworks:
+    - "[e.g., React, Angular, Vue]"
+    - "[e.g., Django, Flask, Spring Boot]"
+  tools:
+    - "[e.g., Docker, Kubernetes]"
+    - "[e.g., Jenkins, GitHub Actions]"
+  infrastructure: "[e.g., AWS, Azure, GCP, On-premise]"
+  version_control: "[e.g., GitHub, GitLab, Bitbucket]"
+  ide_preferences:
+    - "[e.g., VS Code, IntelliJ, PyCharm]"
+
+# =============================================================================
+# KEY USE CASES
+# Define the specific scenarios the client wants to address with Bob
+# =============================================================================
+use_cases:
+  - name: "[Use Case 1 - e.g., API Development]"
+    description: "[Brief description of what the client wants to accomplish]"
+    priority: "high"  # high, medium, or low
+    technologies: ["[relevant tech stack]"]
+    estimated_time: "[e.g., 30 minutes]"
+    
+  - name: "[Use Case 2 - e.g., Code Refactoring]"
+    description: "[Brief description]"
+    priority: "high"
+    technologies: ["[relevant tech stack]"]
+    estimated_time: "[e.g., 45 minutes]"
+    
+  - name: "[Use Case 3 - e.g., Testing & Debugging]"
+    description: "[Brief description]"
+    priority: "medium"
+    technologies: ["[relevant tech stack]"]
+    estimated_time: "[e.g., 30 minutes]"
+
+# =============================================================================
+# EXTERNAL RESOURCES
+# Links to client-specific documentation, APIs, and reference materials
+# =============================================================================
+resources:
+  documentation:
+    - name: "[Internal Wiki/Confluence]"
+      url: "[URL]"
+      description: "[What this resource contains]"
+      
+  apis:
+    - name: "[Internal API Name]"
+      url: "[API endpoint or docs URL]"
+      authentication: "[Auth method if relevant]"
+      
+  repositories:
+    - name: "[Main Repository]"
+      url: "[GitHub/GitLab URL]"
+      access_notes: "[Any special access requirements]"
+      
+  reference_materials:
+    - name: "[Coding Standards]"
+      url: "[URL or file path]"
+    - name: "[Architecture Diagrams]"
+      url: "[URL or file path]"
+
+# =============================================================================
+# BOOTCAMP SCHEDULE (Default: 6 hours)
+# =============================================================================
+schedule:
+  total_duration_hours: 6
+  date: "[YYYY-MM-DD]"
+  timezone: "[e.g., America/Toronto, UTC-5]"
+  
+  # Morning Session: Introduction and Core Features (3 hours)
+  morning_session:
+    start_time: "09:00"
+    end_time: "12:00"
+    duration_minutes: 180
+    
+    segments:
+      - name: "Introduction & Setup"
+        start_time: "09:00"
+        duration_minutes: 30
+        topics:
+          - "Welcome and introductions"
+          - "Bootcamp objectives and agenda"
+          - "Bob overview: What is Bob and what can it do?"
+          - "Environment setup verification"
+          - "Q&A: Initial questions"
+        deliverables:
+          - "All participants have Bob running"
+          - "Understanding of bootcamp goals"
+      
+      - name: "Basic Bob Features"
+        start_time: "09:30"
+        duration_minutes: 90
+        topics:
+          - "Core commands and navigation"
+          - "File operations (read, write, edit)"
+          - "Code analysis and understanding"
+          - "Basic tool usage (execute_command, search_files)"
+          - "Working with different file types"
+          - "Best practices for prompting Bob"
+        hands_on:
+          - lab_id: "lab1"
+          - duration: 30
+          - description: "Guided exercises on basic operations"
+        deliverables:
+          - "Comfort with basic Bob commands"
+          - "Completed Lab 1 exercises"
+      
+      - name: "Advanced Bob Features"
+        start_time: "11:00"
+        duration_minutes: 60
+        topics:
+          - "Complex workflows and multi-step tasks"
+          - "Working with multiple files simultaneously"
+          - "Code refactoring and optimization"
+          - "Debugging and troubleshooting"
+          - "Using apply_diff for precise changes"
+          - "MCP servers and integrations (if applicable)"
+        hands_on:
+          - lab_id: "lab2"
+          - duration: 30
+          - description: "Advanced scenarios and workflows"
+        deliverables:
+          - "Understanding of advanced capabilities"
+          - "Completed Lab 2 exercises"
+  
+  # Lunch Break
+  lunch_break:
+    start_time: "12:00"
+    end_time: "13:00"
+    duration_minutes: 60
+  
+  # Afternoon Session: Client-Specific Application (3 hours)
+  afternoon_session:
+    start_time: "13:00"
+    end_time: "16:00"
+    duration_minutes: 180
+    
+    segments:
+      - name: "Customer-Specific Use Cases"
+        start_time: "13:00"
+        duration_minutes: 150
+        topics:
+          - "Review of client's key use cases"
+          - "Walkthrough of client's codebase/environment"
+          - "Best practices for client's tech stack"
+          - "Integration with client's tools and workflows"
+          - "Real-world problem solving"
+        hands_on:
+          - lab_id: "lab3"
+          - duration: 90
+          - description: "Work on actual client scenarios"
+        deliverables:
+          - "Solutions to client-specific challenges"
+          - "Completed Lab 3 with real use cases"
+          - "Documented best practices"
+      
+      - name: "Wrap-up & Next Steps"
+        start_time: "15:30"
+        duration_minutes: 30
+        topics:
+          - "Key takeaways and lessons learned"
+          - "Resources for continued learning"
+          - "Support channels and escalation"
+          - "Action items and follow-up"
+          - "Feedback and Q&A"
+        deliverables:
+          - "Action plan for Bob adoption"
+          - "List of resources and contacts"
+          - "Feedback collected"
+
+# =============================================================================
+# LAB EXERCISES
+# Detailed information about hands-on labs
+# =============================================================================
+labs:
+  - id: "lab1"
+    name: "Basic Bob Operations"
+    duration_minutes: 30
+    difficulty: "beginner"
+    objectives:
+      - "Navigate and read files in a codebase"
+      - "Make simple code changes using Bob"
+      - "Execute commands and verify results"
+      - "Search for code patterns"
+    prerequisites:
+      - "Bob installed and running"
+      - "Access to sample repository"
+    exercises:
+      - "Read and analyze a configuration file"
+      - "Update a function with new logic"
+      - "Search for all TODO comments"
+      - "Run tests to verify changes"
+    
+  - id: "lab2"
+    name: "Advanced Workflows"
+    duration_minutes: 30
+    difficulty: "intermediate"
+    objectives:
+      - "Perform multi-file refactoring"
+      - "Debug complex issues"
+      - "Implement new features across multiple files"
+      - "Use advanced Bob tools effectively"
+    prerequisites:
+      - "Completed Lab 1"
+      - "Understanding of basic Bob operations"
+    exercises:
+      - "Refactor a module to improve code quality"
+      - "Debug a failing test case"
+      - "Add a new API endpoint with tests"
+      - "Update documentation to match code changes"
+    
+  - id: "lab3"
+    name: "Client-Specific Implementation"
+    duration_minutes: 90
+    difficulty: "advanced"
+    objectives:
+      - "Apply Bob to real client scenarios"
+      - "Solve actual business problems"
+      - "Integrate with client's existing workflows"
+      - "Demonstrate ROI and value"
+    prerequisites:
+      - "Completed Labs 1 and 2"
+      - "Access to client codebase/environment"
+    exercises:
+      - "[Customize based on client use cases]"
+      - "[Real problem from client backlog]"
+      - "[Integration with client tools]"
+      - "[Performance optimization scenario]"
+
+# =============================================================================
+# PARTICIPANT INFORMATION
+# =============================================================================
+participants:
+  expected_count: "[e.g., 5-10]"
+  roles:
+    - "[e.g., Software Engineers]"
+    - "[e.g., Tech Leads]"
+    - "[e.g., DevOps Engineers]"
+  skill_levels:
+    - "[e.g., Junior: 2]"
+    - "[e.g., Mid-level: 5]"
+    - "[e.g., Senior: 3]"
+  prerequisites:
+    - "[e.g., Basic programming knowledge]"
+    - "[e.g., Familiarity with Git]"
+    - "[e.g., VS Code installed]"
+
+# =============================================================================
+# SUCCESS CRITERIA
+# =============================================================================
+success_criteria:
+  - "All participants can independently use Bob for basic tasks"
+  - "Team completes at least one client-specific use case"
+  - "Participants understand how to get help and support"
+  - "Clear action plan for Bob adoption post-bootcamp"
+  - "Positive feedback from participants (>4/5 rating)"
+
+# =============================================================================
+# FOLLOW-UP PLAN
+# =============================================================================
+follow_up:
+  - activity: "Office hours session"
+    timing: "1 week post-bootcamp"
+    duration: "1 hour"
+    
+  - activity: "Check-in on action items"
+    timing: "2 weeks post-bootcamp"
+    duration: "30 minutes"
+    
+  - activity: "Advanced topics workshop (optional)"
+    timing: "1 month post-bootcamp"
+    duration: "2 hours"
+
+# =============================================================================
+# NOTES
+# =============================================================================
+notes: |
+  Additional context, special requirements, or considerations for this bootcamp.
+  
+  Examples:
+  - Security clearance requirements
+  - Network restrictions or air-gapped environments
+  - Specific compliance considerations
+  - Cultural or language considerations
+  - Time zone challenges for distributed teams
+
+# Made with Bob

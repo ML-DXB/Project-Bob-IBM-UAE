@@ -1,0 +1,339 @@
+# Bob Client Bootcamp Configuration - Healthcare Example
+# This is a sample configuration for a healthcare technology client
+
+# =============================================================================
+# CLIENT INFORMATION
+# =============================================================================
+client:
+  name: "HealthTech Solutions"
+  market: "Healthcare Technology / Electronic Health Records"
+  contact:
+    primary: "Dr. Michael Chen"
+    email: "michael.chen@healthtech.com"
+  
+# =============================================================================
+# TECHNICAL ENVIRONMENT
+# =============================================================================
+technologies:
+  primary_language: "Python"
+  frameworks:
+    - "Django"
+    - "Django REST Framework"
+    - "React"
+    - "Celery"
+  tools:
+    - "Docker"
+    - "PostgreSQL"
+    - "Redis"
+    - "RabbitMQ"
+    - "GitHub Actions"
+  infrastructure: "Azure (AKS, Azure SQL, Blob Storage)"
+  version_control: "GitHub"
+  ide_preferences:
+    - "VS Code"
+    - "PyCharm"
+
+# =============================================================================
+# KEY USE CASES
+# =============================================================================
+use_cases:
+  - name: "FHIR API Integration"
+    description: "Implement FHIR-compliant APIs for patient data exchange with proper validation and error handling"
+    priority: "high"
+    technologies: ["Django REST Framework", "FHIR", "PostgreSQL"]
+    estimated_time: "45 minutes"
+    
+  - name: "HIPAA Compliance Audit"
+    description: "Review and update code to ensure HIPAA compliance, including PHI encryption and access logging"
+    priority: "high"
+    technologies: ["Python", "Django", "Azure Key Vault"]
+    estimated_time: "30 minutes"
+    
+  - name: "Patient Data Migration"
+    description: "Create scripts to migrate patient records from legacy system to new EHR platform"
+    priority: "high"
+    technologies: ["Python", "Pandas", "SQLAlchemy"]
+    estimated_time: "30 minutes"
+    
+  - name: "Clinical Decision Support"
+    description: "Develop rule engine for clinical alerts and recommendations"
+    priority: "medium"
+    technologies: ["Python", "Django", "Celery"]
+    estimated_time: "30 minutes"
+
+# =============================================================================
+# EXTERNAL RESOURCES
+# =============================================================================
+resources:
+  documentation:
+    - name: "FHIR Implementation Guide"
+      url: "https://wiki.healthtech.com/fhir-guide"
+      description: "Internal guide for FHIR resource implementation"
+    - name: "HIPAA Compliance Checklist"
+      url: "https://wiki.healthtech.com/hipaa"
+      description: "Security and privacy requirements"
+      
+  apis:
+    - name: "Patient Data API"
+      url: "https://api.healthtech.com/v1/patients"
+      authentication: "OAuth 2.0 with SMART on FHIR"
+    - name: "Clinical Data Repository"
+      url: "https://api.healthtech.com/v1/clinical"
+      authentication: "JWT with role-based access"
+      
+  repositories:
+    - name: "EHR Backend"
+      url: "https://github.com/healthtech/ehr-backend"
+      access_notes: "Main Django application"
+    - name: "FHIR Resources"
+      url: "https://github.com/healthtech/fhir-resources"
+      access_notes: "FHIR resource definitions and validators"
+      
+  reference_materials:
+    - name: "Python Style Guide"
+      url: "https://wiki.healthtech.com/python-style"
+    - name: "API Design Standards"
+      url: "https://wiki.healthtech.com/api-standards"
+    - name: "HL7 FHIR Specification"
+      url: "https://www.hl7.org/fhir/"
+
+# =============================================================================
+# BOOTCAMP SCHEDULE (6 hours)
+# =============================================================================
+schedule:
+  total_duration_hours: 6
+  date: "2026-03-10"
+  timezone: "America/Los_Angeles, UTC-8"
+  
+  morning_session:
+    start_time: "09:00"
+    end_time: "12:00"
+    duration_minutes: 180
+    
+    segments:
+      - name: "Introduction & Setup"
+        start_time: "09:00"
+        duration_minutes: 30
+        topics:
+          - "Welcome and healthcare context"
+          - "Bootcamp objectives for HealthTech"
+          - "Bob overview and HIPAA considerations"
+          - "Environment setup verification"
+          - "Q&A: Initial questions"
+        deliverables:
+          - "All participants have Bob running"
+          - "Access to development environment confirmed"
+          - "Understanding of compliance requirements"
+      
+      - name: "Basic Bob Features"
+        start_time: "09:30"
+        duration_minutes: 90
+        topics:
+          - "Core commands and navigation"
+          - "Working with Python and Django code"
+          - "File operations and code analysis"
+          - "Database migrations and models"
+          - "Best practices for healthcare code"
+        hands_on:
+          - lab_id: "lab1"
+          - duration: 30
+          - description: "Practice with patient data models"
+        deliverables:
+          - "Comfort with basic Bob commands"
+          - "Completed Lab 1 exercises"
+      
+      - name: "Advanced Bob Features"
+        start_time: "11:00"
+        duration_minutes: 60
+        topics:
+          - "Multi-file refactoring in Django"
+          - "API development with DRF"
+          - "Testing strategies for healthcare apps"
+          - "Debugging and troubleshooting"
+          - "Working with FHIR resources"
+        hands_on:
+          - lab_id: "lab2"
+          - duration: 30
+          - description: "Refactor patient API endpoints"
+        deliverables:
+          - "Understanding of advanced capabilities"
+          - "Completed Lab 2 exercises"
+  
+  lunch_break:
+    start_time: "12:00"
+    end_time: "13:00"
+    duration_minutes: 60
+  
+  afternoon_session:
+    start_time: "13:00"
+    end_time: "16:00"
+    duration_minutes: 180
+    
+    segments:
+      - name: "HealthTech-Specific Use Cases"
+        start_time: "13:00"
+        duration_minutes: 150
+        topics:
+          - "FHIR API implementation"
+          - "HIPAA compliance code review"
+          - "Patient data migration scripts"
+          - "Clinical decision support rules"
+          - "Integration with Azure services"
+        hands_on:
+          - lab_id: "lab3"
+          - duration: 90
+          - description: "Work on actual HealthTech EHR scenarios"
+        deliverables:
+          - "FHIR endpoint implemented"
+          - "HIPAA compliance verified"
+          - "Migration script created"
+          - "Clinical rules engine updated"
+      
+      - name: "Wrap-up & Next Steps"
+        start_time: "15:30"
+        duration_minutes: 30
+        topics:
+          - "Key takeaways for HealthTech team"
+          - "Resources and support channels"
+          - "Integration with CI/CD pipeline"
+          - "Action items for Bob adoption"
+          - "Feedback and Q&A"
+        deliverables:
+          - "Action plan for team adoption"
+          - "List of resources and contacts"
+          - "Feedback collected"
+
+# =============================================================================
+# LAB EXERCISES
+# =============================================================================
+labs:
+  - id: "lab1"
+    name: "Basic Bob Operations with Django"
+    duration_minutes: 30
+    difficulty: "beginner"
+    objectives:
+      - "Navigate Django project structure"
+      - "Read and analyze Django models"
+      - "Make simple code changes"
+      - "Run Django tests"
+    prerequisites:
+      - "Bob installed and running"
+      - "Access to sample EHR project"
+      - "Python 3.11 and Django installed"
+    exercises:
+      - "Read and analyze Patient model"
+      - "Update a model field"
+      - "Create a database migration"
+      - "Run unit tests to verify changes"
+    
+  - id: "lab2"
+    name: "Advanced Django API Development"
+    duration_minutes: 30
+    difficulty: "intermediate"
+    objectives:
+      - "Refactor patient API endpoints"
+      - "Add FHIR resource validation"
+      - "Implement proper error handling"
+      - "Update API tests"
+    prerequisites:
+      - "Completed Lab 1"
+      - "Understanding of Django REST Framework"
+    exercises:
+      - "Refactor patient serializer"
+      - "Add FHIR validation logic"
+      - "Implement audit logging"
+      - "Update integration tests"
+    
+  - id: "lab3"
+    name: "HealthTech EHR Implementation"
+    duration_minutes: 90
+    difficulty: "advanced"
+    objectives:
+      - "Build FHIR-compliant API"
+      - "Ensure HIPAA compliance"
+      - "Create data migration scripts"
+      - "Implement clinical rules"
+    prerequisites:
+      - "Completed Labs 1 and 2"
+      - "Access to HealthTech EHR repository"
+    exercises:
+      - "Implement FHIR Patient resource endpoint"
+      - "Add PHI encryption and access logging"
+      - "Create patient data migration script"
+      - "Develop clinical alert rule engine"
+
+# =============================================================================
+# PARTICIPANT INFORMATION
+# =============================================================================
+participants:
+  expected_count: "6"
+  roles:
+    - "Backend Engineers (4)"
+    - "Clinical Informatics Specialist (1)"
+    - "DevOps Engineer (1)"
+  skill_levels:
+    - "Junior: 1"
+    - "Mid-level: 3"
+    - "Senior: 2"
+  prerequisites:
+    - "Python and Django experience"
+    - "Understanding of healthcare data standards"
+    - "Familiarity with Git"
+    - "VS Code or PyCharm installed"
+
+# =============================================================================
+# SUCCESS CRITERIA
+# =============================================================================
+success_criteria:
+  - "All participants can use Bob for Django development"
+  - "Team completes FHIR API implementation"
+  - "HIPAA compliance requirements understood and applied"
+  - "Data migration script demonstrates value"
+  - "Positive feedback from participants (>4/5 rating)"
+  - "Clear adoption plan for EHR development team"
+
+# =============================================================================
+# FOLLOW-UP PLAN
+# =============================================================================
+follow_up:
+  - activity: "Office hours for EHR development team"
+    timing: "1 week post-bootcamp"
+    duration: "1 hour"
+    
+  - activity: "Review of Bob usage in FHIR development"
+    timing: "2 weeks post-bootcamp"
+    duration: "30 minutes"
+    
+  - activity: "Advanced HIPAA compliance patterns workshop"
+    timing: "1 month post-bootcamp"
+    duration: "2 hours"
+
+# =============================================================================
+# NOTES
+# =============================================================================
+notes: |
+  Special considerations for HealthTech:
+  
+  - HIPAA compliance is mandatory for all PHI handling
+  - All patient data must be encrypted at rest and in transit
+  - Audit logging required for all PHI access
+  - FHIR R4 standard compliance required
+  - BAA (Business Associate Agreement) in place
+  - Regular security audits and penetration testing
+  
+  Healthcare-specific requirements:
+  - HL7 FHIR resource validation
+  - SMART on FHIR authentication
+  - Clinical terminology (SNOMED CT, LOINC, RxNorm)
+  - Interoperability with other EHR systems
+  - Patient consent management
+  - Clinical decision support integration
+  
+  Development environment:
+  - Azure-based infrastructure
+  - PostgreSQL for patient data
+  - Redis for caching and sessions
+  - RabbitMQ for async tasks
+  - GitHub Actions for CI/CD
+
+# Made with Bob
