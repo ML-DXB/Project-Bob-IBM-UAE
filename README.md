@@ -63,6 +63,7 @@ This bootcamp template is designed to help clients learn Bob through a structure
 - **`labs/lab3-client-specific/`** - Advanced exercises tailored to client needs
 
 ### Resources
+- **`resources/bob-differentiators.md`** - What makes Bob unique (NEW!)
 - **`resources/cheat-sheet.md`** - Quick reference guide for Bob commands
 - **`resources/troubleshooting.md`** - Common issues and solutions
 - **`resources/external-links.md`** - Curated external resources
@@ -180,6 +181,42 @@ This is the most important file. Bob will read this to understand the client con
 - Update cheat sheet with client-specific examples
 - Add troubleshooting for client's environment
 - Curate external links relevant to their stack
+
+## 🌟 Bob's Unique Differentiators
+
+Understanding what makes Bob unique helps you deliver more impactful bootcamps. Bob stands out in four key areas:
+
+### 1. 🔧 Extensible Architecture
+- **Custom Modes**: Tailor AI behavior for specific workflows (Code, Ask, Plan, or create your own)
+- **MCP Server Integration**: Connect external tools and services directly into development workflow
+- **Marketplace**: Share and discover custom modes created by the community
+
+### 2. 🧠 Intelligent Resource Optimization
+- **Automatic Model Selection**: Bob chooses the right AI model for each task (Frontier-class for complex, lighter for simple)
+- **Dynamic Context Management**: Efficient compression and prioritization reduces costs by up to 60%
+- **Transparent Operation**: No cognitive load of choosing models yourself
+
+### 3. 🔍 Bob Findings: Automated Analysis
+- **Security Scanning**: Continuous vulnerability detection with remediation recommendations
+- **Code Quality**: Intelligent refactoring suggestions to reduce technical debt
+- **Compliance**: Enforcement of best practices across your codebase
+- **Proactive**: Catches issues before they reach production
+
+### 4. ☕ Enterprise Java Modernization
+- **Deep Integration**: Works with IBM's Application Modernization Accelerator
+- **J2EE to Liberty**: Automated migration with minimal manual intervention
+- **Version Upgrades**: Seamless Java version migrations (8 → 11 → 17 → 21)
+- **Beyond Java**: Can modernize other languages too (Python, JavaScript, PHP, Ruby, .NET)
+
+**📖 For complete details, see [`resources/bob-differentiators.md`](resources/bob-differentiators.md)**
+
+### Why This Matters for Your Bootcamp
+
+When delivering bootcamps, emphasize these differentiators:
+- **Morning Session**: Introduce modes, Bob Findings, and literate coding
+- **Advanced Session**: Demonstrate MCP integrations and intelligent optimization
+- **Client Session**: Show how differentiators solve their specific problems
+- **Throughout**: Let participants experience automatic model selection naturally
 
 ## 🎓 Bootcamp Structure
 

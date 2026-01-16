@@ -76,17 +76,22 @@ Bob will guide you through a series of questions:
    - Frameworks and tools
    - Infrastructure (AWS, Azure, etc.)
 
-3. **Use Cases**
+3. **Lab Technology Preference**
+   - Should Labs 1 & 2 (basic Bob features) use the same technology as the client?
+   - Or use generic examples that work across languages?
+   - This helps ensure labs are relevant to the client's daily work
+
+4. **Use Cases**
    - What problems to solve
    - Priority levels
    - Time estimates
 
-4. **Schedule**
+5. **Schedule**
    - Total duration (3, 6, or 12 hours)
    - Date and timezone
    - Timing preferences
 
-5. **Participants**
+6. **Participants**
    - Team size
    - Roles and skill levels
    - Prerequisites
@@ -144,13 +149,17 @@ User: "Create a new bootcamp for Acme Financial Services"
 Bob will ask about:
 1. Industry and contact info
 2. Tech stack (Java, Spring Boot, etc.)
-3. Key use cases (API development, security, etc.)
-4. Duration and schedule
-5. Team composition
+3. Lab technology preference:
+   "Should Labs 1 & 2 use Java/Spring Boot like your client work,
+    or generic examples? Using client tech makes labs more relevant
+    but takes more customization time."
+4. Key use cases (API development, security, etc.)
+5. Duration and schedule
+6. Team composition
 
 Then Bob will:
 - Generate bootcamp-config.yaml
-- Customize all labs
+- Customize labs based on technology preference
 - Create Lab 3 scenarios
 - Validate everything
 ```
@@ -275,13 +284,26 @@ If your client is similar to an example, start there:
 - Financial Services → `examples/sample-config-fintech.yaml`
 - Healthcare → `examples/sample-config-healthcare.yaml`
 
-### 4. Validate Before Delivery
+### 4. Choose Lab Technology Wisely
+**Use client technology for Labs 1 & 2 when:**
+- Client uses a specific, less common language/framework
+- Team is new to their tech stack and needs practice
+- You have time for full customization
+- Examples in client's tech will be more engaging
+
+**Use generic examples when:**
+- Client uses common languages (Python, JavaScript, Java)
+- Time is limited (3-hour bootcamp)
+- Focus is on Bob concepts, not language specifics
+- Team is experienced with their stack
+
+### 5. Validate Before Delivery
 Always run validation before considering the bootcamp complete:
 ```
 Validate the bootcamp materials and fix any issues
 ```
 
-### 5. Iterate as Needed
+### 6. Iterate as Needed
 You can always ask Bob to adjust:
 ```
 The Lab 3 scenarios are too complex, simplify them

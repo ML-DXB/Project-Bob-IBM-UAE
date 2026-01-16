@@ -110,16 +110,21 @@ schedule:
         topics:
           - "Core commands and navigation"
           - "File operations (read, write, edit)"
-          - "Code analysis and understanding"
+          - "Code analysis and understanding (literate coding)"
           - "Basic tool usage (execute_command, search_files)"
           - "Working with different file types"
+          - "Bob Modes: Ask, Plan, and Code"
+          - "Bob Findings: Automated security and quality analysis"
+          - "Auto-approval for trusted operations"
           - "Best practices for prompting Bob"
         hands_on:
           - lab_id: "lab1"
           - duration: 30
-          - description: "Guided exercises on basic operations"
+          - description: "Guided exercises covering basic operations, modes, findings, and auto-approval"
         deliverables:
           - "Comfort with basic Bob commands"
+          - "Understanding of Bob modes and when to use them"
+          - "Awareness of Bob Findings capabilities"
           - "Completed Lab 1 exercises"
       
       - name: "Advanced Bob Features"
@@ -131,13 +136,17 @@ schedule:
           - "Code refactoring and optimization"
           - "Debugging and troubleshooting"
           - "Using apply_diff for precise changes"
-          - "MCP servers and integrations (if applicable)"
+          - "Bob Differentiators: What makes Bob unique"
+          - "MCP servers and integrations (extensibility)"
+          - "Intelligent model selection and context optimization"
+          - "Leveraging modes in complex workflows"
         hands_on:
           - lab_id: "lab2"
           - duration: 30
-          - description: "Advanced scenarios and workflows"
+          - description: "Advanced scenarios, workflows, and differentiator features"
         deliverables:
           - "Understanding of advanced capabilities"
+          - "Awareness of Bob's unique differentiators"
           - "Completed Lab 2 exercises"
   
   # Lunch Break

@@ -1,7 +1,7 @@
 # Lab 1: Basic Bob Operations
 
-**Duration:** 30 minutes  
-**Difficulty:** Beginner  
+**Duration:** 30 minutes
+**Difficulty:** Beginner
 **Prerequisites:** Bob installed and running
 
 ## 🎯 Objectives
@@ -12,6 +12,10 @@ By the end of this lab, you will be able to:
 - Make simple code changes using Bob
 - Execute commands and verify results
 - Understand when to use different Bob tools
+- Use Bob's literate coding capabilities to understand code
+- Switch between Bob modes (Code, Ask, Plan)
+- Leverage Bob Findings for code improvements
+- Configure and use auto-approval for trusted operations
 
 ## 📋 Setup
 
@@ -138,9 +142,175 @@ Find the calculate_total function in src/utils.py, read it, then update it to in
 ```
 
 **Expected Outcome:**
-- You can break down complex tasks
-- You understand the workflow: read → modify → verify
-- You're comfortable with multi-step operations
+
+---
+
+### Exercise 6: Literate Coding - Understanding Code (5 minutes)
+
+**Scenario:** You've inherited a complex codebase and need to understand how it works.
+
+**Tasks:**
+1. Ask Bob to explain what a function does
+2. Request a high-level overview of a module
+3. Get Bob to identify potential issues or improvements
+
+**Bob's Literate Coding Capabilities:**
+- Explains code in natural language
+- Identifies patterns and design decisions
+- Suggests improvements and best practices
+- Helps onboard to unfamiliar codebases
+
+**Example Prompt:**
+```
+Read the calculate_total function in src/utils.py and explain:
+1. What does this function do?
+2. What are the inputs and outputs?
+3. Are there any potential issues or edge cases?
+4. How could this be improved?
+```
+
+**Expected Outcome:**
+- Clear understanding of complex code
+- Identification of potential issues
+- Suggestions for improvements
+- Confidence in working with unfamiliar code
+
+**Key Learning:**
+- Bob can explain code in plain language
+- Use Bob to understand legacy or complex code
+- Get insights on code quality and best practices
+- Accelerate onboarding to new codebases
+
+---
+
+### Exercise 7: Bob Modes - Choosing the Right Tool (5 minutes)
+
+**Scenario:** Different tasks require different approaches. Learn when to use each Bob mode.
+
+**Bob Modes:**
+1. **💻 Code Mode** - For making code changes, refactoring, implementing features
+2. **❓ Ask Mode** - For questions, explanations, learning, and research
+3. **📋 Plan Mode** - For planning complex tasks, breaking down work, strategizing
+
+**Tasks:**
+1. Switch to Ask mode and ask Bob to explain a concept
+2. Switch to Plan mode and ask Bob to create a plan for a feature
+3. Switch to Code mode and implement a simple change
+
+**Example Workflow:**
+```
+[In Ask Mode]
+"What's the difference between apply_diff and write_to_file?"
+
+[In Plan Mode]
+"I need to add user authentication to this app. Create a plan with steps."
+
+[In Code Mode]
+"Implement the first step of the authentication plan."
+```
+
+**Expected Outcome:**
+- Understand when to use each mode
+- Know how to switch between modes
+- Use the right mode for the task
+- More efficient workflow
+
+**Key Learning:**
+- **Ask Mode**: Questions, explanations, no code changes
+- **Plan Mode**: Strategy, breaking down complex tasks
+- **Code Mode**: Implementation, refactoring, file operations
+- Switch modes based on what you need
+
+---
+
+### Exercise 8: Bob Findings - Automatic Code Analysis (5 minutes)
+
+**Scenario:** Bob can automatically identify issues, security vulnerabilities, and improvement opportunities in your code.
+
+**What Bob Findings Can Detect:**
+- Security vulnerabilities (SQL injection, XSS, etc.)
+- Code quality issues (complexity, duplication)
+- Performance problems
+- Best practice violations
+- Potential bugs
+
+**Tasks:**
+1. Ask Bob to analyze a file for potential issues
+2. Review Bob's findings and suggestions
+3. Implement recommended fixes
+
+**Example Prompt:**
+```
+Analyze src/api/auth.py for security issues, code quality problems, and potential bugs. Provide specific findings with severity levels and recommendations.
+```
+
+**Expected Outcome:**
+- Bob identifies security vulnerabilities
+- Code quality issues highlighted
+- Specific recommendations provided
+- Understanding of how to improve code
+
+**Key Learning:**
+- Bob automatically scans for security issues
+- Get proactive suggestions for improvements
+- Learn best practices through Bob's analysis
+- Catch issues before they reach production
+
+---
+
+### Exercise 9: Auto-Approval - Streamlining Trusted Operations (5 minutes)
+
+**Scenario:** For trusted operations, you can configure auto-approval to speed up your workflow.
+
+**What is Auto-Approval?**
+- Automatically approve certain Bob operations
+- Reduces back-and-forth for safe operations
+- Configurable based on your trust level
+- Can be enabled/disabled per operation type
+
+**When to Use Auto-Approval:**
+- Reading files (always safe)
+- Searching code (no modifications)
+- Listing files and directories
+- Running read-only commands
+
+**When NOT to Use Auto-Approval:**
+- Writing to critical files
+- Executing destructive commands
+- Making database changes
+- Deploying to production
+
+**Tasks:**
+1. Understand your current auto-approval settings
+2. Configure auto-approval for read operations
+3. Test the workflow with auto-approval enabled
+
+**Example Configuration:**
+```
+Enable auto-approval for:
+- read_file
+- list_files
+- search_files
+- list_code_definition_names
+
+Require manual approval for:
+- write_to_file
+- apply_diff
+- execute_command
+- insert_content
+```
+
+**Expected Outcome:**
+- Understand auto-approval benefits and risks
+- Know which operations are safe to auto-approve
+- Configure settings appropriately
+- Faster workflow for trusted operations
+
+**Key Learning:**
+- Auto-approval speeds up safe operations
+- Always require approval for modifications
+- Configure based on your comfort level
+- Balance speed with safety
 
 ---
 
@@ -169,11 +339,36 @@ After completing this lab, you should understand:
    - Verify changes by running tests
    - Use commands to gather information
 
-5. **Best Practices**
+5. **Literate Coding**
+   - Bob explains code in natural language
+   - Use Bob to understand unfamiliar codebases
+   - Get insights on code quality and improvements
+   - Accelerate learning and onboarding
+
+6. **Bob Modes**
+   - **Ask Mode**: Questions and explanations
+   - **Plan Mode**: Strategy and task breakdown
+   - **Code Mode**: Implementation and changes
+   - Switch modes based on your needs
+
+7. **Bob Findings**
+   - Automatic security vulnerability detection
+   - Code quality analysis
+   - Performance issue identification
+   - Proactive improvement suggestions
+
+8. **Auto-Approval**
+   - Speed up trusted operations
+   - Configure for read-only operations
+   - Always require approval for modifications
+   - Balance speed with safety
+
+9. **Best Practices**
    - Be specific in your prompts
    - Provide context about what you're trying to achieve
    - Break complex tasks into steps
    - Verify changes after making them
+   - Use the right mode for the task
 
 ## 💡 Tips for Success
 
@@ -203,6 +398,10 @@ After completing this lab, you should understand:
 2. How can you make your prompts more effective?
 3. What's the benefit of breaking tasks into steps?
 4. How do you verify that changes work correctly?
+5. When should you use Ask mode vs Code mode?
+6. What types of operations are safe to auto-approve?
+7. How can Bob Findings help improve code quality?
+8. How does literate coding accelerate onboarding?
 
 ## ✅ Completion Checklist
 
@@ -211,9 +410,15 @@ After completing this lab, you should understand:
 - [ ] Completed Exercise 3: Simple Code Changes
 - [ ] Completed Exercise 4: Command Execution
 - [ ] Completed Exercise 5: Multi-Step Workflow
+- [ ] Completed Exercise 6: Literate Coding
+- [ ] Completed Exercise 7: Bob Modes
+- [ ] Completed Exercise 8: Bob Findings
+- [ ] Completed Exercise 9: Auto-Approval
 - [ ] Understand when to use each Bob tool
 - [ ] Can write effective prompts
 - [ ] Comfortable with basic Bob operations
+- [ ] Know how to switch between modes
+- [ ] Understand Bob's security and quality features
 
 ## 🚀 Next Steps
 
@@ -225,9 +430,18 @@ Once you've completed this lab:
 
 ## 📚 Additional Resources
 
-- Bob Documentation: [Link to docs]
-- Tool Reference Guide: See `resources/cheat-sheet.md`
-- Troubleshooting: See `resources/troubleshooting.md`
+- **Bob Differentiators**: See `resources/bob-differentiators.md` - Learn what makes Bob unique
+- **Bob Documentation**: [Link to docs]
+- **Tool Reference Guide**: See `resources/cheat-sheet.md`
+- **Troubleshooting**: See `resources/troubleshooting.md`
+
+### 🌟 Want to Learn More About Bob's Unique Capabilities?
+
+Check out `resources/bob-differentiators.md` to learn about:
+- **Extensible Architecture** - Custom modes and MCP server integrations
+- **Intelligent Optimization** - Automatic model selection and context management
+- **Bob Findings** - Automated security and quality analysis
+- **Enterprise Modernization** - Java and legacy code transformation
 
 ---
 

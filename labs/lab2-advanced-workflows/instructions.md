@@ -173,7 +173,49 @@ Review the calculate_statistics function in utils/analytics.py. Refactor it to b
 
 ## 🎓 Advanced Techniques
 
-### 1. Reading Multiple Files Efficiently
+### 1. Leveraging Bob Modes in Complex Workflows
+
+As tasks get more complex, using the right mode becomes even more important:
+
+**Strategic Mode Switching:**
+```
+[Ask Mode] - Understand the problem
+"Explain the current authentication architecture and identify potential issues"
+
+[Plan Mode] - Break down the solution
+"Create a detailed plan to migrate from session-based to JWT authentication"
+
+[Code Mode] - Implement step by step
+"Implement step 1: Add JWT library and configuration"
+```
+
+**Why This Matters:**
+- Ask Mode gives you deep understanding without making changes
+- Plan Mode helps you think through complex changes before coding
+- Code Mode focuses on implementation with full context
+
+**Pro Tip:** Use Plan mode to create a todo list, then work through it in Code mode.
+
+### 2. Using Bob Findings in Refactoring
+
+Before refactoring, ask Bob to analyze the code:
+
+```
+"Analyze this module for security issues, code quality problems, and refactoring opportunities. Prioritize by severity."
+```
+
+**Bob Findings Will Identify:**
+- Security vulnerabilities to fix first
+- Code smells to address
+- Performance bottlenecks
+- Maintainability issues
+
+**Then refactor with confidence:**
+```
+"Refactor this module addressing the high-priority findings you identified, starting with security issues."
+```
+
+### 3. Reading Multiple Files Efficiently
 
 When working with related files, read them together:
 
@@ -323,9 +365,20 @@ Once you've completed this lab:
 
 ## 📚 Additional Resources
 
-- Advanced Bob Patterns: [Link to docs]
-- Refactoring Guide: See `resources/cheat-sheet.md`
-- Debugging Tips: See `resources/troubleshooting.md`
+- **Bob Differentiators**: See `resources/bob-differentiators.md` - Learn what makes Bob unique
+- **Advanced Bob Patterns**: [Link to docs]
+- **Refactoring Guide**: See `resources/cheat-sheet.md`
+- **Debugging Tips**: See `resources/troubleshooting.md`
+
+### 🌟 Leverage Bob's Advanced Capabilities
+
+As you work through advanced workflows, remember Bob's differentiators:
+- **Automatic Model Selection** - Bob uses the right model for each task (you'll notice faster responses for simple tasks, deeper analysis for complex ones)
+- **Bob Findings** - Ask Bob to analyze code for security and quality issues proactively
+- **MCP Integrations** - Connect to your internal tools and documentation
+- **Context Optimization** - Bob efficiently manages large codebases
+
+Learn more in `resources/bob-differentiators.md`
 
 ---
 
