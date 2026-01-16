@@ -27,7 +27,14 @@ customModes:
     groups:
       - read
       - - edit
-        - fileRegex: (bootcamp-config\.yaml|\.bobmodes|labs/.*\.md|schedule/.*\.md|examples/.*\.yaml|resources/.*\.md)$
-          description: Bootcamp configuration and content files
+        - fileRegex: (bootcamp-config\.yaml|\.bobmodes|labs/.*\.(md|py|js|ts|java|c|cpp|cs|go|rb|php|swift|kt|rs|sh|bash|ksh|ps1|sql|r|scala|groovy|pl|lua|4gl|txt|json|xml|yaml|yml|html|css|jsx|tsx|vue)|schedule/.*\.md|examples/.*\.yaml|resources/.*\.md)$
+          description: Bootcamp configuration, content files, and lab sample code
       - command
-    customInstructions: ""
+    customInstructions: >-
+      When you need to create or edit a file in the labs/ directory but encounter a permission error:
+      1. Check if the file extension is included in the fileRegex pattern
+      2. If not included, inform the user that the file type is not currently supported
+      3. Offer to update the .bobmodes fileRegex to include the new extension
+      4. Ask the user if they want you to add the extension or if they prefer to grant temporary permission
+      
+      Common programming extensions already supported: .py, .js, .ts, .java, .c, .cpp, .cs, .go, .rb, .php, .swift, .kt, .rs, .sh, .bash, .ksh, .ps1, .sql, .r, .scala, .groovy, .pl, .lua, .4gl, .txt, .json, .xml, .yaml, .yml, .html, .css, .jsx, .tsx, .vue
