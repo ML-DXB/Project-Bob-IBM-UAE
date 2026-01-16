@@ -37,9 +37,9 @@
           <ask_followup_question>
             <question>Would you like to start from an example configuration or create one from scratch?</question>
             <follow_up>
+              <suggest>Create from scratch - I'll provide all the details</suggest>
               <suggest>Start from the Financial Services example (Java/Spring Boot)</suggest>
               <suggest>Start from the Healthcare example (Python/Django)</suggest>
-              <suggest>Create from scratch - I'll provide all the details</suggest>
               <suggest>Show me both examples first so I can decide</suggest>
             </follow_up>
           </ask_followup_question>
@@ -58,10 +58,10 @@
           <ask_followup_question>
             <question>What is the client's company name and industry/market segment?</question>
             <follow_up>
+              <suggest>Let me type the specific details</suggest>
               <suggest>Acme Financial Services - Banking/Financial Services</suggest>
               <suggest>HealthCare Plus - Healthcare Technology</suggest>
               <suggest>TechRetail Corp - E-commerce/Retail</suggest>
-              <suggest>Let me type the specific details</suggest>
             </follow_up>
           </ask_followup_question>
         </step>
@@ -78,10 +78,10 @@
           <ask_followup_question>
             <question>What is the client's primary programming language and key frameworks?</question>
             <follow_up>
+              <suggest>Let me specify their exact stack</suggest>
               <suggest>Python with Django and React</suggest>
               <suggest>Java with Spring Boot and Angular</suggest>
               <suggest>JavaScript/TypeScript with Node.js and React</suggest>
-              <suggest>Let me specify their exact stack</suggest>
             </follow_up>
           </ask_followup_question>
         </step>
@@ -115,10 +115,10 @@
           <ask_followup_question>
             <question>What are the top 3-4 use cases or scenarios you want to cover in the bootcamp?</question>
             <follow_up>
+              <suggest>Let me describe our specific use cases</suggest>
               <suggest>API development, code refactoring, testing, debugging</suggest>
               <suggest>Legacy code modernization, performance optimization, security updates</suggest>
               <suggest>Microservices development, database optimization, CI/CD integration</suggest>
-              <suggest>Let me describe our specific use cases</suggest>
             </follow_up>
           </ask_followup_question>
         </step>
