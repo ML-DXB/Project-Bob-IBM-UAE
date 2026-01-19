@@ -268,30 +268,6 @@ While Bob excels at Java modernization, it can help modernize **other languages 
 
 ---
 
-## 🎯 Competitive Advantages
-
-### vs. GitHub Copilot
-- ✅ Customizable modes for different workflows
-- ✅ Automatic model selection for cost optimization
-- ✅ Built-in security scanning with Bob Findings
-- ✅ Enterprise Java modernization capabilities
-- ✅ MCP server extensibility
-
-### vs. Cursor
-- ✅ More sophisticated context management
-- ✅ Proactive code analysis (Bob Findings)
-- ✅ Enterprise-grade security features
-- ✅ Specialized Java modernization tools
-- ✅ Custom mode marketplace
-
-### vs. Amazon CodeWhisperer
-- ✅ Multi-model intelligence
-- ✅ Extensible architecture (MCP)
-- ✅ Comprehensive security analysis
-- ✅ Better context understanding
-- ✅ Enterprise modernization focus
-
----
 
 ## 💡 Real-World Impact
 
