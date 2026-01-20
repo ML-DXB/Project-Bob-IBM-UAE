@@ -288,6 +288,143 @@
           tailoring all examples and exercises to the client.
         </details>
       </step>
+      
+      <step number="5">
+        <action>Ask about code generation preference</action>
+        <ask_followup_question>
+          <question>Would you like me to generate sample code for the lab exercises?</question>
+          <follow_up>
+            <suggest>Yes, generate both starter code and complete solutions (recommended - ready to deliver)</suggest>
+            <suggest>Generate starter code only (participants build solutions during bootcamp)</suggest>
+            <suggest>No code generation (I'll create the code manually or use existing code)</suggest>
+            <suggest>Let me specify what to generate for each lab</suggest>
+          </follow_up>
+        </ask_followup_question>
+        <details>
+          This determines whether Bob will create:
+          - Starter code: Initial code files for participants to work with
+          - Solutions: Complete working implementations for facilitators
+          
+          Note: This applies to Labs 1 and 2. Lab 3 uses client's actual codebase.
+        </details>
+      </step>
+      
+      <step number="6">
+        <action>Generate code based on preference</action>
+        <details>
+          Based on user's choice, trigger the appropriate code generation workflow.
+          See generate_lab_code workflow for implementation details.
+        </details>
+      </step>
+    </workflow>
+
+    <workflow name="generate_lab_code">
+      <description>Generate starter code and/or solutions for Labs 1 and 2</description>
+      
+      <step number="1">
+        <action>Read lab instructions and configuration</action>
+        <details>
+          Read the customized lab instructions and bootcamp-config.yaml to understand:
+          - Exercises and their requirements
+          - Client's technology stack
+          - Expected outcomes for each exercise
+        </details>
+      </step>
+      
+      <step number="2">
+        <action>Determine what to generate</action>
+        <generation_options>
+          <option name="both">
+            <generate>Starter code with TODO comments</generate>
+            <generate>Complete solution implementations</generate>
+            <generate>Test files (if applicable)</generate>
+            <generate>README with setup instructions</generate>
+          </option>
+          <option name="starter_only">
+            <generate>Starter code with TODO comments</generate>
+            <generate>Test files (if applicable)</generate>
+            <generate>README with setup instructions</generate>
+          </option>
+          <option name="custom">
+            <generate>Ask user to specify per lab</generate>
+          </option>
+        </generation_options>
+      </step>
+      
+      <step number="3">
+        <action>Generate code for Lab 1</action>
+        <details>
+          For each exercise in Lab 1:
+          1. Create appropriate file structure for client's tech stack
+          2. Generate starter code with:
+             - Basic structure and imports
+             - Function/class signatures
+             - TODO comments indicating what to implement
+             - Comments explaining the exercise goals
+          3. If generating solutions:
+             - Create complete working implementations
+             - Include proper error handling
+             - Add comments explaining the approach
+             - Ensure code follows best practices
+          4. Create test files if applicable
+        </details>
+        <file_structure>
+          <directory>labs/lab1-basic-operations/starter/</directory>
+          <directory>labs/lab1-basic-operations/solution/</directory>
+        </file_structure>
+      </step>
+      
+      <step number="4">
+        <action>Generate code for Lab 2</action>
+        <details>
+          For each exercise in Lab 2:
+          1. Create appropriate file structure for client's tech stack
+          2. Generate starter code with more complex scenarios
+          3. If generating solutions:
+             - Create complete implementations
+             - Show advanced patterns and techniques
+             - Include comprehensive error handling
+          4. Create test files demonstrating the expected behavior
+        </details>
+        <file_structure>
+          <directory>labs/lab2-advanced-workflows/starter/</directory>
+          <directory>labs/lab2-advanced-workflows/solution/</directory>
+        </file_structure>
+      </step>
+      
+      <step number="5">
+        <action>Create README files</action>
+        <details>
+          For each lab, create a README in the starter/ directory explaining:
+          - How to set up the environment
+          - Dependencies to install
+          - How to run the code
+          - How to run tests
+          - Where to find the exercises
+        </details>
+      </step>
+      
+      <step number="6">
+        <action>Validate generated code</action>
+        <validation_checks>
+          <check>Code uses client's technology stack correctly</check>
+          <check>Starter code has clear TODOs for participants</check>
+          <check>Solutions are complete and working</check>
+          <check>Code follows best practices for the language</check>
+          <check>File structure is logical and organized</check>
+          <check>README files are clear and helpful</check>
+        </validation_checks>
+      </step>
+      
+      <step number="7">
+        <action>Confirm completion</action>
+        <details>
+          Inform user that code has been generated and provide summary:
+          - What was created
+          - Where files are located
+          - Next steps (e.g., review code, test it, customize further)
+        </details>
+      </step>
     </workflow>
 
     <workflow name="create_client_scenarios">
@@ -352,6 +489,10 @@
           <check>Lab 3 addresses client's use cases</check>
           <check>All labs have clear objectives</check>
           <check>Timing is realistic for each lab</check>
+          <check>Starter code exists if code generation was requested</check>
+          <check>Solution code exists if solution generation was requested</check>
+          <check>Generated code matches client's tech stack</check>
+          <check>README files exist in starter directories if code was generated</check>
         </category>
         
         <category name="schedule">

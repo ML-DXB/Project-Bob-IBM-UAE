@@ -160,6 +160,10 @@ Bob will ask about:
 Then Bob will:
 - Generate bootcamp-config.yaml
 - Customize labs based on technology preference
+- Ask about code generation preference:
+  * Generate both starter code and solutions (recommended)
+  * Generate starter code only
+  * No code generation (manual creation)
 - Create Lab 3 scenarios
 - Validate everything
 ```
@@ -173,8 +177,10 @@ Bob will:
 1. Read the existing config
 2. Update Lab 1 with client's tech stack
 3. Update Lab 2 with client's tech stack
-4. Create Lab 3 scenarios from use cases
-5. Validate consistency
+4. Ask about code generation preference
+5. Generate sample code if requested
+6. Create Lab 3 scenarios from use cases
+7. Validate consistency
 ```
 
 ### Workflow 3: Validate Existing Bootcamp
@@ -297,7 +303,24 @@ If your client is similar to an example, start there:
 - Focus is on Bob concepts, not language specifics
 - Team is experienced with their stack
 
-### 5. Validate Before Delivery
+### 5. Code Generation Options
+**Generate both starter code and solutions (recommended) when:**
+- You want a complete, ready-to-deliver bootcamp
+- Facilitators need reference implementations
+- Participants benefit from seeing working examples
+- Time allows for code review and customization
+
+**Generate starter code only when:**
+- You want participants to build solutions during the bootcamp
+- Focus is on learning by doing
+- Facilitators are comfortable creating solutions on the fly
+
+**Skip code generation when:**
+- You have existing code samples to use
+- Labs will use client's actual codebase
+- You prefer to create code manually
+
+### 6. Validate Before Delivery
 Always run validation before considering the bootcamp complete:
 ```
 Validate the bootcamp materials and fix any issues
@@ -421,6 +444,11 @@ Before delivering a bootcamp, ensure:
 - [ ] `bootcamp-config.yaml` is complete (no placeholders)
 - [ ] All labs use client's tech stack
 - [ ] Lab 3 addresses client's use cases
+- [ ] Sample code generated (if requested)
+- [ ] Starter code exists in labs/*/starter/ directories
+- [ ] Solution code exists in labs/*/solution/ directories (if requested)
+- [ ] README files exist in starter directories
+- [ ] Generated code matches client's tech stack
 - [ ] Timing calculations are correct
 - [ ] Schedule matches available time
 - [ ] All materials are consistent
@@ -437,6 +465,8 @@ Ask Bob directly:
 How do I customize Lab 2 for a Django project?
 What's the best way to structure Lab 3 scenarios?
 Can you explain the validation errors?
+Generate sample code for Lab 1 using Python and Flask
+Should I generate solutions or just starter code?
 ```
 
 ### After Bootcamp Delivery
