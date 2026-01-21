@@ -151,7 +151,7 @@
 | Time | Activity | Details |
 |------|----------|---------|
 | 3:30 - 3:40 | Key Takeaways | - Review main concepts<br>- Highlight success stories<br>- Common pitfalls to avoid |
-| 3:40 - 3:50 | Resources & Support | - Documentation links<br>- Support channels<br>- Community resources<br>- Follow-up plan |
+| 3:40 - 3:50 | Resources & Support | - Documentation links<br>- Support channels<br>- Community resources<br>- Follow-up plan<br>- [Troubleshooting guide](../resources/troubleshooting.md#-getting-support) |
 | 3:50 - 3:55 | Action Items | - Individual action plans<br>- Team adoption strategy<br>- Next steps |
 | 3:55 - 4:00 | Feedback & Q&A | - Collect feedback<br>- Final questions<br>- Thank you and closing |
 
