@@ -5,14 +5,12 @@ Curated list of external resources for learning and reference.
 ## 📚 Official Documentation
 
 ### Bob Documentation
-- **Main Documentation:** [Link to Bob docs]
-- **API Reference:** [Link to API docs]
-- **Tool Reference:** [Link to tool docs]
-- **Best Practices:** [Link to best practices]
+- **Main Documentation:** (https://ibm.biz/bob-doc)
+
 
 ### Getting Started
 - **Quick Start Guide:** [Link]
-- **Tutorial Videos:** [Link]
+- **Tutorial Videos:** (https://www.youtube.com/@ibm-bob)
 - **Sample Projects:** [Link]
 
 ---
