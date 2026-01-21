@@ -592,6 +592,136 @@
       </step>
       
       <step number="2">
+        <action>Ask about updating external resources and contact information</action>
+        <ask_followup_question>
+          <question>Before saving, would you like to update the external resources (resources/external-links.md) and after-bootcamp support contact information (resources/troubleshooting.md)?</question>
+          <follow_up>
+            <suggest>I'll edit them myself (default - files have placeholders you can fill in)</suggest>
+            <suggest>Have Bob update them by asking me for the information</suggest>
+            <suggest>Skip - keep the template placeholders for now</suggest>
+          </follow_up>
+        </ask_followup_question>
+        <details>
+          These files contain:
+          - external-links.md: Bob documentation links, company-specific resources, support channels
+          - troubleshooting.md: After-bootcamp support contact information (email, Slack, office hours)
+          
+          Both files have placeholders marked with [Link], [URL], [Contact info] that should be customized.
+        </details>
+      </step>
+      
+      <step number="3">
+        <action>Handle resource update choice</action>
+        
+        <option name="bob_updates">
+          <substep number="1">
+            <action>Collect Bob documentation links</action>
+            <ask_followup_question>
+              <question>What are your Bob documentation URLs? (Provide what you know, I'll handle unknowns)</question>
+              <follow_up>
+                <suggest>Main docs: [URL], API reference: [URL], Tool reference: [URL]</suggest>
+                <suggest>I don't have these yet - leave placeholders</suggest>
+                <suggest>Use generic Bob documentation links</suggest>
+              </follow_up>
+            </ask_followup_question>
+          </substep>
+          
+          <substep number="2">
+            <action>Collect company-specific resources</action>
+            <ask_followup_question>
+              <question>Do you have company-specific resources to add? (Internal wikis, repos, style guides, etc.)</question>
+              <follow_up>
+                <suggest>Yes, let me provide the links</suggest>
+                <suggest>No, remove those sections</suggest>
+                <suggest>Leave placeholders for now</suggest>
+              </follow_up>
+            </ask_followup_question>
+          </substep>
+          
+          <substep number="3">
+            <action>Collect support contact information</action>
+            <ask_followup_question>
+              <question>What are the after-bootcamp support contact details?</question>
+              <follow_up>
+                <suggest>Email: [email], Slack: [channel], Office hours: [schedule]</suggest>
+                <suggest>I don't know yet - leave placeholders</suggest>
+                <suggest>Remove the support section</suggest>
+              </follow_up>
+            </ask_followup_question>
+          </substep>
+          
+          <substep number="4">
+            <action>Update external-links.md</action>
+            <details>
+              Replace placeholders with provided information:
+              - Bob documentation links (lines 8-11)
+              - Company-specific resources if provided
+              - Support contact info (lines 301-303)
+              
+              For unknown items, offer to:
+              - Leave placeholder with [URL] or [Link]
+              - Delete the line/section entirely
+              - Add a TODO comment
+            </details>
+          </substep>
+          
+          <substep number="5">
+            <action>Update troubleshooting.md</action>
+            <details>
+              Update the "Getting Support" section (lines 520-524):
+              - After Bootcamp support email
+              - Slack channel
+              - Documentation URL
+              - Office hours schedule
+              
+              For unknown items, offer same options as external-links.md
+            </details>
+          </substep>
+          
+          <substep number="6">
+            <action>Confirm updates complete</action>
+            <message>
+              ✅ Resource files updated!
+              
+              Updated:
+              - resources/external-links.md: [summary of changes]
+              - resources/troubleshooting.md: [summary of changes]
+              
+              Remaining placeholders: [count and list if any]
+            </message>
+          </substep>
+        </option>
+        
+        <option name="user_edits">
+          <action>Provide guidance for manual editing</action>
+          <message>
+            📝 You can edit these files manually:
+            
+            resources/external-links.md:
+            - Lines 8-11: Bob documentation links
+            - Lines 301-303: Emergency support contacts
+            - Search for [Link] or [URL] to find other placeholders
+            
+            resources/troubleshooting.md:
+            - Lines 520-524: After-bootcamp support information
+            
+            I'll proceed with saving the bootcamp now.
+          </message>
+        </option>
+        
+        <option name="skip">
+          <action>Continue without updating</action>
+          <message>
+            ⏭️ Skipping resource updates. Template placeholders remain in:
+            - resources/external-links.md
+            - resources/troubleshooting.md
+            
+            You can update these later before delivery.
+          </message>
+        </option>
+      </step>
+      
+      <step number="4">
         <action>Ask how to save the bootcamp</action>
         <ask_followup_question>
           <question>✅ Bootcamp for {client_name} is complete and validated! How would you like to save it?</question>
@@ -773,7 +903,7 @@
         </option>
       </step>
       
-      <step number="4">
+      <step number="5">
         <action>Offer to create another bootcamp</action>
         <ask_followup_question>
           <question>Would you like to create another bootcamp?</question>

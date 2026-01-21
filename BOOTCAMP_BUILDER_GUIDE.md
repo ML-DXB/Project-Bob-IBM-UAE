@@ -216,7 +216,25 @@ Bob will:
 ```
 User: Bootcamp is complete and validated
 
-Bob will ask:
+Bob will first ask:
+"Would you like to update external resources and contact information?"
+
+Options:
+1. I'll edit them myself (default)
+   - Bob provides file locations and line numbers
+   - You manually update placeholders
+
+2. Have Bob update them
+   - Bob asks for documentation URLs
+   - Bob asks for support contact info
+   - Bob updates both files automatically
+   - Handles unknown items (placeholder/delete/skip)
+
+3. Skip for now
+   - Keep template placeholders
+   - Update before delivery
+
+Then Bob will ask:
 "How would you like to save it?"
 
 Options:
@@ -238,6 +256,27 @@ Options:
 4. Commit to current branch
    - Simple commit
    - Manual git workflow
+```
+
+**Example: Update Resources with Bob**
+```
+Bob: "Would you like to update external resources and contact information?"
+User: "Have Bob update them"
+
+Bob: "What are your Bob documentation URLs?"
+User: "Main docs: https://docs.bob.com, API: https://api.bob.com"
+
+Bob: "Do you have company-specific resources to add?"
+User: "Yes, internal wiki: https://wiki.acme.com/bob"
+
+Bob: "What are the after-bootcamp support contact details?"
+User: "Email: bob-support@acme.com, Slack: #bob-help, Office hours: Mon-Fri 2-4pm EST"
+
+Bob will:
+1. Update resources/external-links.md with documentation links
+2. Add company resources to external-links.md
+3. Update resources/troubleshooting.md with support contacts
+4. Report what was updated and any remaining placeholders
 ```
 
 **Example: Export to New Directory**

@@ -250,15 +250,3 @@
 
 ---
 
-## 📞 Support Information
-
-**During Bootcamp:**
-- Facilitator: [Name and contact]
-- Technical Support: [Contact info]
-- Slack Channel: [Channel name]
-
-**Post-Bootcamp:**
-- Office Hours: [Schedule]
-- Support Email: [Email address]
-- Documentation: [URL]
-- Community: [Forum/Slack URL]
