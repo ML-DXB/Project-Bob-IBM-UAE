@@ -24,7 +24,7 @@ Before starting, ensure you have:
 
 ## 🎯 Client Use Cases
 
-> **Note:** This lab should be customized based on the client's specific use cases defined in `bootcamp-config.yaml`. The exercises below are templates that should be replaced with actual client scenarios.
+> **Note:** This lab should be customized based on the client's specific use cases defined in `bobathon-config.yaml`. The exercises below are templates that should be replaced with actual client scenarios.
 
 ---
 
@@ -406,7 +406,7 @@ After completing the lab, consider:
 
 ## 🎉 Congratulations!
 
-You've completed the Bob bootcamp! You now have the skills to:
+You've completed the Bob bobathon! You now have the skills to:
 - Use Bob effectively for daily development
 - Solve complex problems with AI assistance
 - Integrate Bob into your workflow
@@ -418,4 +418,4 @@ You've completed the Bob bootcamp! You now have the skills to:
 
 **Questions?** Reach out to your facilitator or the support team!
 
-**Feedback:** Please share your bootcamp experience to help us improve future sessions.
+**Feedback:** Please share your bobathon experience to help us improve future sessions.

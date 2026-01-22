@@ -1,5 +1,5 @@
-# Bob Client Bootcamp Configuration Template
-# This file contains all the information Bob needs to understand and deliver a customized bootcamp
+# Bob Client Bobathon Configuration Template
+# This file contains all the information Bob needs to understand and deliver a customized bobathon
 
 # =============================================================================
 # CLIENT INFORMATION
@@ -77,7 +77,7 @@ resources:
       url: "[URL or file path]"
 
 # =============================================================================
-# BOOTCAMP SCHEDULE (Default: 6 hours)
+# BOBATHON SCHEDULE (Default: 6 hours)
 # =============================================================================
 schedule:
   total_duration_hours: 6
@@ -96,13 +96,13 @@ schedule:
         duration_minutes: 30
         topics:
           - "Welcome and introductions"
-          - "Bootcamp objectives and agenda"
+          - "Bobathon objectives and agenda"
           - "Bob overview: What is Bob and what can it do?"
           - "Environment setup verification"
           - "Q&A: Initial questions"
         deliverables:
           - "All participants have Bob running"
-          - "Understanding of bootcamp goals"
+          - "Understanding of bobathon goals"
       
       - name: "Basic Bob Features"
         start_time: "09:30"
@@ -278,7 +278,7 @@ success_criteria:
   - "All participants can independently use Bob for basic tasks"
   - "Team completes at least one client-specific use case"
   - "Participants understand how to get help and support"
-  - "Clear action plan for Bob adoption post-bootcamp"
+  - "Clear action plan for Bob adoption post-bobathon"
   - "Positive feedback from participants (>4/5 rating)"
 
 # =============================================================================
@@ -286,22 +286,22 @@ success_criteria:
 # =============================================================================
 follow_up:
   - activity: "Office hours session"
-    timing: "1 week post-bootcamp"
+    timing: "1 week post-bobathon"
     duration: "1 hour"
     
   - activity: "Check-in on action items"
-    timing: "2 weeks post-bootcamp"
+    timing: "2 weeks post-bobathon"
     duration: "30 minutes"
     
   - activity: "Advanced topics workshop (optional)"
-    timing: "1 month post-bootcamp"
+    timing: "1 month post-bobathon"
     duration: "2 hours"
 
 # =============================================================================
 # NOTES
 # =============================================================================
 notes: |
-  Additional context, special requirements, or considerations for this bootcamp.
+  Additional context, special requirements, or considerations for this bobathon.
   
   Examples:
   - Security clearance requirements

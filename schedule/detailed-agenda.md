@@ -1,8 +1,8 @@
-# Bob Client Bootcamp - Detailed Agenda
+# Bob Client Bobathon - Detailed Agenda
 
 ## Overview
-**Duration:** 6 hours (1 day)  
-**Format:** Hybrid lecture and hands-on labs  
+**Duration:** 6 hours (1 day)
+**Format:** Hybrid lecture and hands-on labs
 **Target Audience:** Software engineers, tech leads, and developers
 
 ---
@@ -22,13 +22,13 @@
 | Time | Activity | Details |
 |------|----------|---------|
 | 9:00 - 9:10 | Welcome & Introductions | - Facilitator introduction<br>- Participant introductions<br>- Icebreaker activity |
-| 9:10 - 9:20 | Bootcamp Overview | - Agenda walkthrough<br>- Learning objectives<br>- Success criteria |
+| 9:10 - 9:20 | Bobathon Overview | - Agenda walkthrough<br>- Learning objectives<br>- Success criteria |
 | 9:20 - 9:25 | What is Bob? | - Bob overview and demo<br>- Key capabilities<br>- Use case examples |
 | 9:25 - 9:30 | Environment Check | - Verify Bob installation<br>- Test basic functionality<br>- Troubleshoot issues |
 
 #### Deliverables
 - ✅ All participants have Bob running
-- ✅ Clear understanding of bootcamp goals
+- ✅ Clear understanding of bobathon goals
 - ✅ Participants are comfortable asking questions
 
 ---
@@ -181,18 +181,18 @@
 
 ## 🎯 Success Metrics
 
-### Immediate (End of Bootcamp)
+### Immediate (End of Bobathon)
 - [ ] 100% of participants can use Bob independently for basic tasks
 - [ ] At least 80% complete all three labs
 - [ ] Average satisfaction rating ≥ 4/5
 - [ ] All participants understand how to get support
 
-### Short-term (1-2 weeks post-bootcamp)
+### Short-term (1-2 weeks post-bobathon)
 - [ ] Participants actively using Bob in daily work
 - [ ] At least one client use case implemented in production
 - [ ] Questions and issues resolved through support channels
 
-### Long-term (1 month post-bootcamp)
+### Long-term (1 month post-bobathon)
 - [ ] Measurable productivity improvements
 - [ ] Team adoption rate ≥ 70%
 - [ ] Positive impact on code quality metrics
@@ -203,7 +203,7 @@
 ## 📝 Facilitator Notes
 
 ### Preparation Checklist
-- [ ] Review client's bootcamp-config.yaml
+- [ ] Review client's bobathon-config.yaml
 - [ ] Customize labs based on client use cases
 - [ ] Test all lab exercises in client environment
 - [ ] Prepare backup examples for common issues

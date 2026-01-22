@@ -1,12 +1,12 @@
 # .bob Directory
 
-This directory contains Bob-specific instructions and metadata for working with the bootcamp template.
+This directory contains Bob-specific instructions and metadata for working with the bobathon (Bob bootcamp) template.
 
 ## 📁 Contents
 
 ### instructions.md
 Comprehensive guide for Bob on how to use this template effectively. This file explains:
-- How to read and interpret the bootcamp configuration
+- How to read and interpret the bobathon configuration
 - Common tasks and workflows
 - Best practices for customizing content
 - File structure and relationships
@@ -23,9 +23,9 @@ The `.bob` directory serves as a "control center" for Bob when working with this
 
 ## 🚀 Quick Start for Bob
 
-When a user asks for help with this bootcamp template:
+When a user asks for help with this bobathon template:
 
-1. **Read** `bootcamp-config.yaml` first
+1. **Read** `bobathon-config.yaml` first
 2. **Understand** the client's context (industry, tech stack, use cases)
 3. **Read** `.bob/instructions.md` for detailed guidance
 4. **Customize** content based on client needs
@@ -41,7 +41,7 @@ When a user asks for help with this bootcamp template:
 
 ## 🔗 Related Files
 
-- `../bootcamp-config.yaml` - Main configuration (read this first!)
+- `../bobathon-config.yaml` - Main configuration (read this first!)
 - `../README.md` - Human-readable instructions (has YAML frontmatter for Bob)
 - `instructions.md` - Detailed Bob instructions (in this directory)
 
@@ -50,7 +50,7 @@ When a user asks for help with this bootcamp template:
 This directory helps Bob provide better assistance by:
 - Making it clear this is a template that needs customization
 - Providing structured guidance on how to customize
-- Ensuring consistency across all bootcamp deliveries
+- Ensuring consistency across all bobathon deliveries
 - Reducing the need for repetitive explanations
 
 ## 🎓 Learning
@@ -58,7 +58,7 @@ This directory helps Bob provide better assistance by:
 If you're Bob and reading this for the first time:
 1. Read `instructions.md` in this directory
 2. Look at the YAML frontmatter in `../README.md`
-3. Examine `../bootcamp-config.yaml` structure
+3. Examine `../bobathon-config.yaml` structure
 4. Review the example configs in `../examples/`
 
 This will give you a complete understanding of how to work with this template.

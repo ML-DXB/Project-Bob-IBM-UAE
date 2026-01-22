@@ -1,6 +1,6 @@
-<bootcamp_builder_workflow>
+<bobathon_builder_workflow>
   <overview>
-    This mode guides facilitators through creating customized Bob bootcamps for clients.
+    This mode guides facilitators through creating customized bobathons (Bob bootcamps) for clients.
     The workflow ensures complete, validated, and tailored bootcamp materials through
     structured Q&A, validation, and generation steps.
   </overview>
@@ -11,16 +11,16 @@
   </core_principle>
 
   <main_workflows>
-    <workflow name="setup_new_bootcamp">
-      <description>Create a new bootcamp configuration from scratch</description>
+    <workflow name="setup_new_bobathon">
+      <description>Create a new bobathon configuration from scratch</description>
       
       <phase name="initialization">
         <step number="1">
           <action>Greet and explain the process</action>
           <details>
-            Explain that you'll guide them through creating a customized bootcamp by asking
+            Explain that you'll guide them through creating a customized bobathon (bob bootcamp) by asking
             questions about their client. Mention this will take 5-10 minutes and result in
-            a complete, ready-to-use bootcamp configuration.
+            a complete, ready-to-use bobathon configuration.
           </details>
         </step>
         
@@ -113,7 +113,7 @@
             - Estimated time (for Lab 3)
           </details>
           <ask_followup_question>
-            <question>What are the top 3-4 use cases or scenarios you want to cover in the bootcamp?</question>
+            <question>What are the top 3-4 use cases or scenarios you want to cover in the bobathon?</question>
             <follow_up>
               <suggest>Let me describe our specific use cases</suggest>
               <suggest>API development, code refactoring, testing, debugging</suggest>
@@ -129,7 +129,7 @@
             Help them prioritize use cases based on:
             - Business impact
             - Team pain points
-            - Available time in bootcamp
+            - Available time in bobathon
             
             Ensure at least 2 high-priority use cases for Lab 3.
           </details>
@@ -138,10 +138,10 @@
 
       <phase name="schedule_and_timing">
         <step number="8">
-          <action>Determine bootcamp duration</action>
+          <action>Determine bobathon duration</action>
           <default>6 hours (1 day)</default>
           <ask_followup_question>
-            <question>How much time do you have for the bootcamp?</question>
+            <question>How much time do you have for the bobathon?</question>
             <follow_up>
               <suggest>6 hours (full day) - recommended default</suggest>
               <suggest>3-4 hours (half day) - condensed version</suggest>
@@ -199,7 +199,7 @@
           </optional_fields>
           <details>
             Ask if they have internal documentation, APIs, or repositories that should
-            be referenced in the bootcamp materials.
+            be referenced in the bobathon materials.
           </details>
         </step>
       </phase>
@@ -221,7 +221,7 @@
         </step>
         
         <step number="13">
-          <action>Generate bootcamp-config.yaml</action>
+          <action>Generate bobathon-config.yaml</action>
           <details>
             Create the complete configuration file with all collected information.
             Use proper YAML formatting and include all sections.
@@ -254,9 +254,9 @@
       <description>Customize lab exercises for client's tech stack</description>
       
       <step number="1">
-        <action>Read bootcamp configuration</action>
+        <action>Read bobathon configuration</action>
         <details>
-          Read bootcamp-config.yaml to understand:
+          Read bobathon-config.yaml to understand:
           - Client's technology stack
           - Use cases and priorities
           - Participant skill levels
@@ -295,7 +295,7 @@
           <question>Would you like me to generate sample code for the lab exercises?</question>
           <follow_up>
             <suggest>Yes, generate both starter code and complete solutions (recommended - ready to deliver)</suggest>
-            <suggest>Generate starter code only (participants build solutions during bootcamp)</suggest>
+            <suggest>Generate starter code only (participants build solutions during bobathon)</suggest>
             <suggest>No code generation (I'll create the code manually or use existing code)</suggest>
             <suggest>Let me specify what to generate for each lab</suggest>
           </follow_up>
@@ -324,7 +324,7 @@
       <step number="1">
         <action>Read lab instructions and configuration</action>
         <details>
-          Read the customized lab instructions and bootcamp-config.yaml to understand:
+          Read the customized lab instructions and bobathon-config.yaml to understand:
           - Exercises and their requirements
           - Client's technology stack
           - Expected outcomes for each exercise
@@ -433,7 +433,7 @@
       <step number="1">
         <action>Read configuration and use cases</action>
         <details>
-          Read bootcamp-config.yaml focusing on:
+          Read bobathon-config.yaml focusing on:
           - Use cases (especially high priority)
           - Technology stack
           - Available time for Lab 3
@@ -472,12 +472,12 @@
       </step>
     </workflow>
 
-    <workflow name="validate_bootcamp">
-      <description>Validate bootcamp materials for completeness and consistency</description>
+    <workflow name="validate_bobathon">
+      <description>Validate bobathon materials for completeness and consistency</description>
       
       <validation_checklist>
         <category name="configuration">
-          <check>All required fields filled in bootcamp-config.yaml</check>
+          <check>All required fields filled in bobathon-config.yaml</check>
           <check>Use cases have priorities and time estimates</check>
           <check>Schedule timing adds up correctly</check>
           <check>Tech stack is complete and consistent</check>
@@ -511,9 +511,9 @@
       </validation_checklist>
       
       <step number="1">
-        <action>Read all bootcamp files</action>
+        <action>Read all bobathon files</action>
         <files_to_check>
-          <file>bootcamp-config.yaml</file>
+          <file>bobathon-config.yaml</file>
           <file>labs/lab1-basic-operations/instructions.md</file>
           <file>labs/lab2-advanced-workflows/instructions.md</file>
           <file>labs/lab3-client-specific/instructions.md</file>
@@ -577,14 +577,14 @@
   </interaction_guidelines>
 
 
-    <workflow name="save_bootcamp">
-      <description>Save completed bootcamp with multiple options</description>
+    <workflow name="save_bobathon">
+      <description>Save completed bobathon with multiple options</description>
       
       <step number="1">
-        <action>Confirm bootcamp is complete and validated</action>
+        <action>Confirm bobathon is complete and validated</action>
         <details>
           Before offering save options, ensure:
-          - bootcamp-config.yaml is complete
+          - bobathon-config.yaml is complete
           - All labs are customized
           - Validation has passed
           - No placeholders remain
@@ -594,7 +594,7 @@
       <step number="2">
         <action>Ask about updating external resources and contact information</action>
         <ask_followup_question>
-          <question>Before saving, would you like to update the external resources (resources/external-links.md) and after-bootcamp support contact information (resources/troubleshooting.md)?</question>
+          <question>Before saving, would you like to update the external resources (resources/external-links.md) and after-bobathon support contact information (resources/troubleshooting.md)?</question>
           <follow_up>
             <suggest>I'll edit them myself (default - files have placeholders you can fill in)</suggest>
             <suggest>Have Bob update them by asking me for the information</suggest>
@@ -604,7 +604,7 @@
         <details>
           These files contain:
           - external-links.md: Bob documentation links, company-specific resources, support channels
-          - troubleshooting.md: After-bootcamp support contact information (email, Slack, office hours)
+          - troubleshooting.md: After-bobathon support contact information (email, Slack, office hours)
           
           Both files have placeholders marked with [Link], [URL], [Contact info] that should be customized.
         </details>
@@ -641,7 +641,7 @@
           <substep number="3">
             <action>Collect support contact information</action>
             <ask_followup_question>
-              <question>What are the after-bootcamp support contact details?</question>
+              <question>What are the after-bobathon support contact details?</question>
               <follow_up>
                 <suggest>Email: [email], Slack: [channel], Office hours: [schedule]</suggest>
                 <suggest>I don't know yet - leave placeholders</suggest>
@@ -669,7 +669,7 @@
             <action>Update troubleshooting.md</action>
             <details>
               Update the "Getting Support" section (lines 520-524):
-              - After Bootcamp support email
+              - After bobathon support email
               - Slack channel
               - Documentation URL
               - Office hours schedule
@@ -703,9 +703,9 @@
             - Search for [Link] or [URL] to find other placeholders
             
             resources/troubleshooting.md:
-            - Lines 520-524: After-bootcamp support information
+            - Lines 520-524: After-bobathon support information
             
-            I'll proceed with saving the bootcamp now.
+            I'll proceed with saving the bobathon now.
           </message>
         </option>
         
@@ -722,13 +722,13 @@
       </step>
       
       <step number="4">
-        <action>Ask how to save the bootcamp</action>
+        <action>Ask how to save the bobathon</action>
         <ask_followup_question>
-          <question>✅ Bootcamp for {client_name} is complete and validated! How would you like to save it?</question>
+          <question>✅ Bobathon for {client_name} is complete and validated! How would you like to save it?</question>
           <follow_up>
-            <suggest>Export to a new directory (../{client-slug}-bootcamp/) - clean, standalone bootcamp</suggest>
+            <suggest>Export to a new directory (../{client-slug}-bobathon/) - clean, standalone bobathon</suggest>
             <suggest>Prepare for pushing to a new repository (I'll provide the URL)</suggest>
-            <suggest>Create a new branch in this repo (bootcamp-{client-slug}) - keep with template</suggest>
+            <suggest>Create a new branch in this repo (bobathon-{client-slug}) - keep with template</suggest>
             <suggest>Just commit to current branch - I'll handle git myself</suggest>
           </follow_up>
         </ask_followup_question>
@@ -742,14 +742,14 @@
             <action>Generate client slug from name</action>
             <details>
               Convert client name to slug: "Acme Corp" → "acme-corp"
-              Use for directory name: ../acme-corp-bootcamp/
+              Use for directory name: ../acme-corp-bobathon/
             </details>
           </substep>
           
           <substep number="2">
             <action>Ask about template file cleanup</action>
             <ask_followup_question>
-              <question>Should I remove template-specific files to create a clean bootcamp package?</question>
+              <question>Should I remove template-specific files to create a clean bobathon package?</question>
               <follow_up>
                 <suggest>Yes, remove .bob/, .bobmodes, examples/ (recommended for client delivery)</suggest>
                 <suggest>No, keep everything (allows future template updates)</suggest>
@@ -760,9 +760,9 @@
           <substep number="3">
             <action>Create export directory and copy files</action>
             <files_to_copy>
-              <file>bootcamp-config.yaml</file>
+              <file>bobathon-config.yaml</file>
               <file>README.md</file>
-              <file>BOOTCAMP_BUILDER_GUIDE.md</file>
+              <file>BOBATHON_BUILDER_GUIDE.md</file>
               <file>schedule/</file>
               <file>labs/</file>
               <file>resources/</file>
@@ -773,7 +773,7 @@
               <file>examples/</file>
             </files_to_exclude_if_cleanup>
             <commands>
-              <command>mkdir ../{client-slug}-bootcamp</command>
+              <command>mkdir ../{client-slug}-bobathon</command>
               <command>Copy files to new directory</command>
             </commands>
           </substep>
@@ -781,17 +781,17 @@
           <substep number="4">
             <action>Provide next steps</action>
             <message>
-              ✅ Bootcamp exported to ../{client-slug}-bootcamp/
+              ✅ Bobathon exported to ../{client-slug}-bobathon/
               
               Next steps:
-              1. cd ../{client-slug}-bootcamp
+              1. cd ../{client-slug}-bobathon
               2. git init
               3. git add .
-              4. git commit -m "Initial bootcamp for {client_name}"
+              4. git commit -m "Initial bobathon for {client_name}"
               5. git remote add origin [your-repo-url]
               6. git push -u origin main
               
-              The bootcamp is ready to deliver!
+              The bobathon is ready to deliver!
             </message>
           </substep>
         </option>
@@ -802,8 +802,8 @@
             <ask_followup_question>
               <question>What's the URL of the target repository?</question>
               <follow_up>
-                <suggest>https://github.com/myorg/{client-slug}-bootcamp.git</suggest>
-                <suggest>git@github.com:myorg/{client-slug}-bootcamp.git</suggest>
+                <suggest>https://github.com/myorg/{client-slug}-bobathon.git</suggest>
+                <suggest>git@github.com:myorg/{client-slug}-bobathon.git</suggest>
                 <suggest>Let me type the exact URL</suggest>
               </follow_up>
             </ask_followup_question>
@@ -814,7 +814,7 @@
             <ask_followup_question>
               <question>Should I remove template-specific files before pushing?</question>
               <follow_up>
-                <suggest>Yes, remove .bob/, .bobmodes, examples/ (clean bootcamp)</suggest>
+                <suggest>Yes, remove .bob/, .bobmodes, examples/ (clean bobathon)</suggest>
                 <suggest>No, keep everything (allows template updates)</suggest>
               </follow_up>
             </ask_followup_question>
@@ -823,10 +823,10 @@
           <substep number="3">
             <action>Create branch and commit</action>
             <commands>
-              <command>git checkout -b bootcamp-{client-slug}</command>
+              <command>git checkout -b bobathon-{client-slug}</command>
               <command>If cleanup: remove template files</command>
               <command>git add .</command>
-              <command>git commit -m "Bootcamp for {client_name}"</command>
+              <command>git commit -m "Bobathon for {client_name}"</command>
             </commands>
           </substep>
           
@@ -838,10 +838,10 @@
               To push to your new repository, run:
               
               git remote add {client-slug} {repo_url}
-              git push {client-slug} bootcamp-{client-slug}:main
+              git push {client-slug} bobathon-{client-slug}:main
               
               Or if you want to push as a different branch:
-              git push {client-slug} bootcamp-{client-slug}:bootcamp
+              git push {client-slug} bobathon-{client-slug}:bobathon
             </message>
           </substep>
         </option>
@@ -850,7 +850,7 @@
           <substep number="1">
             <action>Create and switch to new branch</action>
             <commands>
-              <command>git checkout -b bootcamp-{client-slug}</command>
+              <command>git checkout -b bobathon-{client-slug}</command>
             </commands>
           </substep>
           
@@ -858,22 +858,22 @@
             <action>Commit all changes</action>
             <commands>
               <command>git add .</command>
-              <command>git commit -m "Bootcamp for {client_name}"</command>
+              <command>git commit -m "Bobathon for {client_name}"</command>
             </commands>
           </substep>
           
           <substep number="3">
             <action>Confirm completion</action>
             <message>
-              ✅ Branch 'bootcamp-{client-slug}' created and committed!
+              ✅ Branch 'bobathon-{client-slug}' created and committed!
               
-              The bootcamp is saved in this repository. You can:
+              The bobathon is saved in this repository. You can:
               - Switch back to main: git checkout main
-              - View all bootcamps: git branch
-              - Switch to this bootcamp: git checkout bootcamp-{client-slug}
-              - Push to remote: git push origin bootcamp-{client-slug}
+              - View all bobathons: git branch
+              - Switch to this bobathon: git checkout bobathon-{client-slug}
+              - Push to remote: git push origin bobathon-{client-slug}
               
-              To create another bootcamp, switch back to main and start fresh.
+              To create another bobathon, switch back to main and start fresh.
             </message>
           </substep>
         </option>
@@ -883,7 +883,7 @@
             <action>Commit to current branch</action>
             <commands>
               <command>git add .</command>
-              <command>git commit -m "Bootcamp for {client_name}"</command>
+              <command>git commit -m "Bobathon for {client_name}"</command>
             </commands>
           </substep>
           
@@ -897,18 +897,18 @@
               - Create branches
               - Tag the commit
               
-              The bootcamp is ready to deliver!
+              The bobathon is ready to deliver!
             </message>
           </substep>
         </option>
       </step>
       
       <step number="5">
-        <action>Offer to create another bootcamp</action>
+        <action>Offer to create another bobathon</action>
         <ask_followup_question>
-          <question>Would you like to create another bootcamp?</question>
+          <question>Would you like to create another bobathon?</question>
           <follow_up>
-            <suggest>Yes, start a new bootcamp from scratch</suggest>
+            <suggest>Yes, start a new bobathon from scratch</suggest>
             <suggest>Yes, start from an example configuration</suggest>
             <suggest>No, I'm done for now</suggest>
           </follow_up>
@@ -916,12 +916,12 @@
       </step>
     </workflow>
   <completion_criteria>
-    <criterion>bootcamp-config.yaml is complete and valid</criterion>
+    <criterion>bobathon-config.yaml is complete and valid</criterion>
     <criterion>All labs are customized for client's tech stack</criterion>
     <criterion>Lab 3 addresses client's specific use cases</criterion>
     <criterion>Schedule matches available time</criterion>
     <criterion>All materials are consistent and ready to use</criterion>
   </completion_criteria>
-</bootcamp_builder_workflow>
+</bobathon_builder_workflow>
 
 <!-- Made with Bob -->

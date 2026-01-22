@@ -1,8 +1,8 @@
-# Bootcamp Builder Mode - Installation and Usage Guide
+# Bobathon Builder Mode - Installation and Usage Guide
 
 ## 🎯 Overview
 
-The **Bootcamp Builder** mode is a custom Bob mode that guides you through creating customized bootcamps for clients. It provides:
+The **Bobathon Builder** mode is a custom Bob mode that guides you through creating customized bobathons for clients. It provides:
 
 - **Interactive Q&A** to gather client information
 - **Automatic validation** to ensure completeness
@@ -11,17 +11,17 @@ The **Bootcamp Builder** mode is a custom Bob mode that guides you through creat
 
 ## 📦 Installation
 
-The Bootcamp Builder mode is already included in this template! The mode configuration is in the `.bobmodes` file at the root of this project.
+The Bobathon Builder mode is already included in this template! The mode configuration is in the `.bobmodes` file at the root of this project.
 
 ### Verify Installation
 
 1. Open this project in VS Code with Bob installed
 2. Look for the mode selector in Bob's interface
-3. You should see "🎓 Bootcamp Builder" in the list of available modes
+3. You should see "🎓 Bobathon Builder" in the list of available modes
 
 ### If the Mode Doesn't Appear
 
-If you don't see the Bootcamp Builder mode:
+If you don't see the Bobathon Builder mode:
 
 1. **Reload VS Code Window:**
    - Press `Ctrl+Shift+P` (Windows/Linux) or `Cmd+Shift+P` (Mac)
@@ -30,7 +30,7 @@ If you don't see the Bootcamp Builder mode:
 
 2. **Check the .bobmodes file:**
    - Ensure `.bobmodes` exists in the workspace root
-   - Verify it contains the `bootcamp-builder` mode configuration
+   - Verify it contains the `bobathon-builder` mode configuration
 
 3. **Restart Bob:**
    - Close and reopen VS Code
@@ -38,29 +38,29 @@ If you don't see the Bootcamp Builder mode:
 
 ## 🚀 Quick Start
 
-### Step 1: Switch to Bootcamp Builder Mode
+### Step 1: Switch to Bobathon Builder Mode
 
 1. Open Bob in VS Code
 2. Click the mode selector (shows current mode like "💻 Code" or "❓ Ask")
-3. Select "🎓 Bootcamp Builder" from the list
+3. Select "🎓 Bobathon Builder" from the list
 
-### Step 2: Start Creating a Bootcamp
+### Step 2: Start Creating a Bobathon
 
-Once in Bootcamp Builder mode, you can:
+Once in Bobathon Builder mode, you can:
 
 **Option A: Create from Scratch**
 ```
-Help me create a new bootcamp for [Client Name]
+Help me create a new bobathon for [Client Name]
 ```
 
 **Option B: Start from an Example**
 ```
-I want to create a bootcamp based on the Financial Services example
+I want to create a bobathon based on the Financial Services example
 ```
 
 **Option C: Customize Existing Config**
 ```
-Customize the labs for the client in bootcamp-config.yaml
+Customize the labs for the client in bobathon-config.yaml
 ```
 
 ### Step 3: Answer the Questions
@@ -99,7 +99,7 @@ Bob will guide you through a series of questions:
 ### Step 4: Review and Validate
 
 After gathering information, Bob will:
-- Generate `bootcamp-config.yaml`
+- Generate `bobathon-config.yaml`
 - Validate completeness
 - Check for consistency
 - Offer to customize labs
@@ -112,12 +112,12 @@ Choose what to customize:
 - **Lab 3:** Client-specific scenarios based on use cases
 - **Schedule:** Detailed agenda with timing
 
-### Step 6: Save Your Bootcamp
+### Step 6: Save Your Bobathon
 
-Once everything is complete and validated, Bob will ask how you want to save the bootcamp:
+Once everything is complete and validated, Bob will ask how you want to save the bobathon:
 
 **Option 1: Export to New Directory (Recommended)**
-- Creates a clean, standalone bootcamp in `../{client-name}-bootcamp/`
+- Creates a clean, standalone bobathon in `../{client-name}-bobathon/`
 - Optionally removes template files (.bob/, .bobmodes, examples/)
 - Ready to initialize as a new git repository
 - Perfect for client delivery
@@ -129,9 +129,9 @@ Once everything is complete and validated, Bob will ask how you want to save the
 - Optionally cleans up template files
 
 **Option 3: Create Branch in This Repo**
-- Keeps bootcamp with template for easy updates
-- Creates branch like `bootcamp-acme-corp`
-- All bootcamps in one repository
+- Keeps bobathon with template for easy updates
+- Creates branch like `bobathon-acme-corp`
+- All bobathons in one repository
 - Easy to switch between clients
 
 **Option 4: Commit to Current Branch**
@@ -141,10 +141,10 @@ Once everything is complete and validated, Bob will ask how you want to save the
 
 ## 📋 Common Workflows
 
-### Workflow 1: Complete New Bootcamp Setup
+### Workflow 1: Complete New Bobathon Setup
 
 ```
-User: "Create a new bootcamp for Acme Financial Services"
+User: "Create a new bobathon for Acme Financial Services"
 
 Bob will ask about:
 1. Industry and contact info
@@ -158,7 +158,7 @@ Bob will ask about:
 6. Team composition
 
 Then Bob will:
-- Generate bootcamp-config.yaml
+- Generate bobathon-config.yaml
 - Customize labs based on technology preference
 - Ask about code generation preference:
   * Generate both starter code and solutions (recommended)
@@ -171,7 +171,7 @@ Then Bob will:
 ### Workflow 2: Customize Labs Only
 
 ```
-User: "Customize all labs for the client in bootcamp-config.yaml"
+User: "Customize all labs for the client in bobathon-config.yaml"
 
 Bob will:
 1. Read the existing config
@@ -183,10 +183,10 @@ Bob will:
 7. Validate consistency
 ```
 
-### Workflow 3: Validate Existing Bootcamp
+### Workflow 3: Validate Existing Bobathon
 
 ```
-User: "Validate the bootcamp materials"
+User: "Validate the bobathon materials"
 
 Bob will:
 1. Read all bootcamp files
@@ -211,10 +211,10 @@ Bob will:
 5. Update schedule
 6. Validate new timing
 
-### Workflow 5: Save Completed Bootcamp
+### Workflow 5: Save Completed Bobathon
 
 ```
-User: Bootcamp is complete and validated
+User: Bobathon is complete and validated
 
 Bob will first ask:
 "Would you like to update external resources and contact information?"
@@ -238,8 +238,8 @@ Then Bob will ask:
 "How would you like to save it?"
 
 Options:
-1. Export to new directory (../acme-corp-bootcamp/)
-   - Creates clean, standalone bootcamp
+1. Export to new directory (../acme-corp-bobathon/)
+   - Creates clean, standalone bobathon
    - Optionally removes template files
    - Provides git init instructions
 
@@ -249,7 +249,7 @@ Options:
    - Provides exact push commands
 
 3. Create branch in this repo
-   - Branch: bootcamp-acme-corp
+   - Branch: bobathon-acme-corp
    - Keeps with template
    - Easy to maintain multiple clients
 
@@ -282,17 +282,17 @@ Bob will:
 **Example: Export to New Directory**
 ```
 Bob: "Should I remove template-specific files?"
-User: "Yes, create a clean bootcamp"
+User: "Yes, create a clean bobathon"
 
 Bob will:
-1. Create ../acme-corp-bootcamp/
-2. Copy bootcamp files
+1. Create ../acme-corp-bobathon/
+2. Copy bobathon files
 3. Remove .bob/, .bobmodes, examples/
 4. Provide git commands:
-   cd ../acme-corp-bootcamp
+   cd ../acme-corp-bobathon
    git init
    git add .
-   git commit -m "Initial bootcamp for Acme Corp"
+   git commit -m "Initial bobathon for Acme Corp"
    git remote add origin [your-url]
    git push -u origin main
 ```
@@ -300,26 +300,26 @@ Bob will:
 **Example: Prepare for New Repository**
 ```
 Bob: "What's the target repository URL?"
-User: "https://github.com/myorg/acme-bootcamp.git"
+User: "https://github.com/myorg/acme-bobathon.git"
 
 Bob: "Remove template files?"
 User: "Yes"
 
 Bob will:
-1. Create branch bootcamp-acme-corp
+1. Create branch bobathon-acme-corp
 2. Remove template files
 3. Commit changes
 4. Provide commands:
-   git remote add acme https://github.com/myorg/acme-bootcamp.git
-   git push acme bootcamp-acme-corp:main
+   git remote add acme https://github.com/myorg/acme-bobathon.git
+   git push acme bobathon-acme-corp:main
 ```
 ```
 
 ## 💡 Tips for Best Results
 
 ### 1. Be Specific
-Instead of: "Create a bootcamp"
-Try: "Create a bootcamp for a healthcare client using Python and Django"
+Instead of: "Create a bobathon"
+Try: "Create a bobathon for a healthcare client using Python and Django"
 
 ### 2. Use the Suggestions
 Bob provides 2-4 suggestions for each question - use them to save time!
@@ -338,19 +338,19 @@ If your client is similar to an example, start there:
 
 **Use generic examples when:**
 - Client uses common languages (Python, JavaScript, Java)
-- Time is limited (3-hour bootcamp)
+- Time is limited (3-hour bobathon)
 - Focus is on Bob concepts, not language specifics
 - Team is experienced with their stack
 
 ### 5. Code Generation Options
 **Generate both starter code and solutions (recommended) when:**
-- You want a complete, ready-to-deliver bootcamp
+- You want a complete, ready-to-deliver bobathon
 - Facilitators need reference implementations
 - Participants benefit from seeing working examples
 - Time allows for code review and customization
 
 **Generate starter code only when:**
-- You want participants to build solutions during the bootcamp
+- You want participants to build solutions during the bobathon
 - Focus is on learning by doing
 - Facilitators are comfortable creating solutions on the fly
 
@@ -360,9 +360,9 @@ If your client is similar to an example, start there:
 - You prefer to create code manually
 
 ### 6. Validate Before Delivery
-Always run validation before considering the bootcamp complete:
+Always run validation before considering the bobathon complete:
 ```
-Validate the bootcamp materials and fix any issues
+Validate the bobathon materials and fix any issues
 ```
 
 ### 6. Iterate as Needed
@@ -378,14 +378,14 @@ Change the tech stack from Java to Python
 ### What the Mode Can Do
 
 ✅ **Read and analyze:**
-- Bootcamp configuration
+- Bobathon configuration
 - Lab instructions
 - Schedule files
 - Example configs
 - Resource files
 
 ✅ **Edit and create:**
-- `bootcamp-config.yaml`
+- `bobathon-config.yaml`
 - Lab instructions (`labs/*.md`)
 - Schedule files (`schedule/*.md`)
 - Example configs (`examples/*.yaml`)
@@ -399,7 +399,7 @@ Change the tech stack from Java to Python
 ### What the Mode Cannot Do
 
 ❌ **Cannot edit:**
-- Files outside the bootcamp template
+- Files outside the bobathon template
 - System files
 - Unrelated project files
 
@@ -410,9 +410,9 @@ Change the tech stack from Java to Python
 
 ### Mode Restrictions
 
-The mode is restricted to bootcamp-related files for safety:
+The mode is restricted to bobathon-related files for safety:
 - Prevents accidental changes to other files
-- Ensures focus on bootcamp preparation
+- Ensures focus on bobathon preparation
 - Maintains template integrity
 
 ## 🔍 Troubleshooting
@@ -439,7 +439,7 @@ The mode is restricted to bootcamp-related files for safety:
 ### Issue: Generated Config Has Errors
 
 **Solution:**
-1. Ask Bob to validate: "Validate the bootcamp materials"
+1. Ask Bob to validate: "Validate the bobathon materials"
 2. Bob will identify and fix issues
 3. Review the validation report
 
@@ -462,9 +462,9 @@ prioritize the high-priority use cases.
 ## 📚 Additional Resources
 
 ### Mode Documentation
-- `.bob/rules-bootcamp-builder/1_workflow.xml` - Detailed workflows
-- `.bob/rules-bootcamp-builder/2_validation_rules.xml` - Validation rules
-- `.bob/rules-bootcamp-builder/3_best_practices.xml` - Best practices
+- `.bob/rules-bobathon-builder/1_workflow.xml` - Detailed workflows
+- `.bob/rules-bobathon-builder/2_validation_rules.xml` - Validation rules
+- `.bob/rules-bobathon-builder/3_best_practices.xml` - Best practices
 
 ### Template Documentation
 - `README.md` - Main template documentation
@@ -478,9 +478,9 @@ prioritize the high-priority use cases.
 
 ## 🎯 Success Checklist
 
-Before delivering a bootcamp, ensure:
+Before delivering a bobathon, ensure:
 
-- [ ] `bootcamp-config.yaml` is complete (no placeholders)
+- [ ] `bobathon-config.yaml` is complete (no placeholders)
 - [ ] All labs use client's tech stack
 - [ ] Lab 3 addresses client's use cases
 - [ ] Sample code generated (if requested)
@@ -497,7 +497,7 @@ Before delivering a bootcamp, ensure:
 
 ## 🤝 Getting Help
 
-### During Bootcamp Preparation
+### During Bobathon Preparation
 
 Ask Bob directly:
 ```
@@ -508,7 +508,7 @@ Generate sample code for Lab 1 using Python and Flask
 Should I generate solutions or just starter code?
 ```
 
-### After Bootcamp Delivery
+### After Bobathon Delivery
 
 - Review participant feedback
 - Update template based on learnings
@@ -517,30 +517,30 @@ Should I generate solutions or just starter code?
 
 ## 📞 Support
 
-If you encounter issues with the Bootcamp Builder mode:
+If you encounter issues with the Bobathon Builder mode:
 
 1. **Check this guide** for common solutions
-2. **Review the mode documentation** in `.bob/rules-bootcamp-builder/`
+2. **Review the mode documentation** in `.bob/rules-bobathon-builder/`
 3. **Ask Bob for help** - it can explain its own capabilities
 4. **Contact support** - [your support channel]
 
 ## 🎉 You're Ready!
 
 You now know how to:
-- ✅ Install and activate the Bootcamp Builder mode
-- ✅ Create new bootcamps from scratch
+- ✅ Install and activate the Bobathon Builder mode
+- ✅ Create new bobathons from scratch
 - ✅ Customize labs and materials
-- ✅ Validate bootcamp quality
+- ✅ Validate bobathon quality
 - ✅ Troubleshoot common issues
 
-**Next Step:** Switch to Bootcamp Builder mode and create your first bootcamp!
+**Next Step:** Switch to Bobathon Builder mode and create your first bobathon!
 
 ```
-Help me create a new bootcamp for [Your Client Name]
+Help me create a new bobathon for [Your Client Name]
 ```
 
 ---
 
-**Version:** 1.0.0  
-**Last Updated:** 2026-01-15  
-**Template:** Bob Client Bootcamp Starter
+**Version:** 1.0.0
+**Last Updated:** 2026-01-15
+**Template:** Bob Client Bobathon Starter

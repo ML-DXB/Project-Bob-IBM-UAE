@@ -1,6 +1,6 @@
 <best_practices>
   <overview>
-    Best practices for creating high-quality, effective bootcamp materials that
+    Best practices for creating high-quality, effective bobathon materials that
     deliver value to clients and ensure successful learning outcomes.
   </overview>
 
@@ -47,7 +47,7 @@
       <guidelines>
         <guideline>Explain how information will be used</guideline>
         <guideline>Show examples from similar clients</guideline>
-        <guideline>Clarify impact on bootcamp materials</guideline>
+        <guideline>Clarify impact on bobathon materials</guideline>
       </guidelines>
       <example>
         "I need to know your tech stack so I can customize all lab exercises with examples in your programming language and frameworks. This ensures participants practice with tools they actually use."
@@ -306,7 +306,7 @@
 
     <pitfall name="missing_validation">
       <description>Not validating materials before delivery</description>
-      <impact>Errors discovered during bootcamp, lost credibility</impact>
+      <impact>Errors discovered during bobathon, lost credibility</impact>
       <solution>Always run full validation before marking complete</solution>
     </pitfall>
 

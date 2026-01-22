@@ -1,6 +1,6 @@
 <validation_rules>
   <overview>
-    Validation ensures bootcamp materials are complete, consistent, and ready to deliver.
+    Validation ensures bobathon materials are complete, consistent, and ready to deliver.
     Always validate before marking work as complete.
   </overview>
 
@@ -223,7 +223,7 @@
       <check name="tech_stack_consistency">
         <description>Technology references match across all files</description>
         <files>
-          <file>bootcamp-config.yaml</file>
+          <file>bobathon-config.yaml</file>
           <file>labs/lab1-basic-operations/instructions.md</file>
           <file>labs/lab2-advanced-workflows/instructions.md</file>
           <file>labs/lab3-client-specific/instructions.md</file>
@@ -293,9 +293,9 @@
 
   <validation_workflow>
     <step number="1">
-      <action>Read all bootcamp files</action>
+      <action>Read all bobathon files</action>
       <files>
-        <file>bootcamp-config.yaml</file>
+        <file>bobathon-config.yaml</file>
         <file>labs/lab1-basic-operations/instructions.md</file>
         <file>labs/lab2-advanced-workflows/instructions.md</file>
         <file>labs/lab3-client-specific/instructions.md</file>

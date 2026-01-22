@@ -1,18 +1,18 @@
-# Bob Instructions for Bootcamp Template
+# Bob Instructions for Bobathon (Bob Bootcamp) Template
 
-This file contains instructions specifically for Bob on how to use and work with this bootcamp template.
+This file contains instructions specifically for Bob on how to use and work with this bobathon template.
 
 ## 🎯 Purpose
 
-This template helps you (Bob) assist facilitators in preparing and delivering customized bootcamps for clients. You should read the `bootcamp-config.yaml` file to understand the client's context and use it to provide tailored assistance.
+This template helps you (Bob) assist facilitators in preparing and delivering customized bobathons (Bob bootcamps) for clients. You should read the `bobathon-config.yaml` file to understand the client's context and use it to provide tailored assistance.
 
 ## 📖 How to Use This Template
 
 ### Step 1: Read the Configuration
-When a user asks for help with a bootcamp, first read the configuration:
+When a user asks for help with a bobathon, first read the configuration:
 
 ```
-Read bootcamp-config.yaml to understand the client's context
+Read bobathon-config.yaml to understand the client's context
 ```
 
 This file contains:
@@ -41,7 +41,7 @@ Use the configuration to:
 
 ### Task: Customize Lab Exercises
 When asked to customize labs:
-1. Read `bootcamp-config.yaml` for client context
+1. Read `bobathon-config.yaml` for client context
 2. Read the relevant lab instructions file
 3. Update exercises to use client's tech stack
 4. Add client-specific examples
@@ -49,12 +49,12 @@ When asked to customize labs:
 
 Example:
 ```
-"Customize Lab 1 for this client based on their bootcamp-config.yaml"
+"Customize Lab 1 for this client based on their bobathon-config.yaml"
 ```
 
 ### Task: Generate Schedule
 When asked to create or modify schedule:
-1. Read `bootcamp-config.yaml` for timing preferences
+1. Read `bobathon-config.yaml` for timing preferences
 2. Read `schedule/detailed-agenda.md` for template
 3. Adjust timing based on client needs
 4. Ensure use cases fit within time blocks
@@ -62,7 +62,7 @@ When asked to create or modify schedule:
 
 ### Task: Create Client-Specific Use Cases
 When asked to develop use cases:
-1. Read `bootcamp-config.yaml` for client's use cases
+1. Read `bobathon-config.yaml` for client's use cases
 2. Read `labs/lab3-client-specific/instructions.md` for template
 3. Create detailed scenarios using client's tech stack
 4. Include actual business problems from their domain
@@ -70,7 +70,7 @@ When asked to develop use cases:
 
 ### Task: Prepare Facilitator Materials
 When asked to help prepare:
-1. Read `bootcamp-config.yaml` for full context
+1. Read `bobathon-config.yaml` for full context
 2. Review `schedule/detailed-agenda.md`
 3. Check all lab instructions
 4. Verify examples match client's stack
@@ -79,7 +79,7 @@ When asked to help prepare:
 ## 📋 File Structure Reference
 
 ### Configuration Files
-- `bootcamp-config.yaml` - **START HERE** - Main client configuration
+- `bobathon-config.yaml` - **START HERE** - Main client configuration
 - `README.md` - Human-readable instructions (also has YAML frontmatter for you)
 
 ### Schedule Files
@@ -102,7 +102,7 @@ When asked to help prepare:
 ## 🎯 Key Principles
 
 ### 1. Always Read Configuration First
-Before providing any bootcamp-related assistance, read `bootcamp-config.yaml` to understand:
+Before providing any bobathon-related assistance, read `bobathon-config.yaml` to understand:
 - Who the client is
 - What technologies they use
 - What problems they're trying to solve
@@ -138,7 +138,7 @@ Use real examples from their codebase when possible. Reference their actual:
 User: "Customize Lab 1 for our Python/Django client"
 
 Bob should:
-1. Read bootcamp-config.yaml
+1. Read bobathon-config.yaml
 2. Note: Python, Django, PostgreSQL stack
 3. Read labs/lab1-basic-operations/instructions.md
 4. Update exercises to use Django models, views, tests
@@ -151,7 +151,7 @@ Bob should:
 User: "Create Lab 3 exercises for our fintech client"
 
 Bob should:
-1. Read bootcamp-config.yaml
+1. Read bobathon-config.yaml
 2. Note: Financial services, payment processing use case
 3. Read labs/lab3-client-specific/instructions.md
 4. Create scenarios like:
@@ -167,7 +167,7 @@ Bob should:
 User: "We only have 4 hours, adjust the schedule"
 
 Bob should:
-1. Read bootcamp-config.yaml
+1. Read bobathon-config.yaml
 2. Read schedule/detailed-agenda.md
 3. Compress to 4 hours:
    - Intro: 20 min
@@ -187,7 +187,7 @@ Some clients have special requirements:
 - **Healthcare**: HIPAA, PHI handling
 - **Government**: Security clearances, air-gapped environments
 
-Check the `notes` section in `bootcamp-config.yaml` for these requirements.
+Check the `notes` section in `bobathon-config.yaml` for these requirements.
 
 ### Technology Constraints
 Some clients have specific constraints:
@@ -207,7 +207,7 @@ Adjust complexity based on `participants.skill_levels`:
 ## 📚 Quick Reference
 
 ### Must-Read Files
-1. `bootcamp-config.yaml` - Always read this first
+1. `bobathon-config.yaml` - Always read this first
 2. Relevant lab instructions
 3. Schedule if timing questions
 
@@ -235,7 +235,7 @@ Read together when:
 ```
 User Request
     ↓
-Read bootcamp-config.yaml
+Read bobathon-config.yaml
     ↓
 Understand client context
     ↓
@@ -262,4 +262,4 @@ A: Create custom exercises based on their actual use cases.
 
 ---
 
-**Remember**: Your goal is to help deliver a bootcamp that's perfectly tailored to each client's needs, technology stack, and business objectives. Always start with `bootcamp-config.yaml`!
+**Remember**: Your goal is to help deliver a bobathon (Bob bootcamp) that's perfectly tailored to each client's needs, technology stack, and business objectives. Always start with `bobathon-config.yaml`!

@@ -1,24 +1,24 @@
 <!--
 ---
 bob_context:
-  template_type: "client_bootcamp"
+  template_type: "client_bobathon"
   version: "1.0.0"
-  primary_config: "bootcamp-config.yaml"
+  primary_config: "bobathon-config.yaml"
   
 instructions_for_bob: |
-  This is a bootcamp template for training clients on Bob usage.
+  This is a bobathon template for training clients on Bob usage.
   
-  IMPORTANT: Always read bootcamp-config.yaml first to understand the client context.
+  IMPORTANT: Always read bobathon-config.yaml first to understand the client context.
   
   Key files:
-  - bootcamp-config.yaml: Client info, tech stack, use cases, schedule
+  - bobathon-config.yaml: Client info, tech stack, use cases, schedule
   - .bob/instructions.md: Detailed instructions for you (Bob)
   - labs/: Lab exercises to customize for client
   - schedule/: Timing and agenda templates
   - examples/: Sample configs for different industries
   
   When helping with this template:
-  1. Read bootcamp-config.yaml to understand client needs
+  1. Read bobathon-config.yaml to understand client needs
   2. Tailor all examples to their tech stack
   3. Use their actual use cases and priorities
   4. Respect their time constraints and schedule
@@ -27,7 +27,7 @@ instructions_for_bob: |
   For detailed guidance, read .bob/instructions.md
 
 quick_start_for_bob: |
-  User asks for bootcamp help → Read bootcamp-config.yaml → Understand context → 
+  User asks for bobathon help → Read bobathon-config.yaml → Understand context →
   Read relevant template files → Customize for client → Provide tailored assistance
 
 common_tasks:
@@ -37,13 +37,13 @@ common_tasks:
   - prepare_materials: "Read all relevant files, ensure consistency with client context"
 ---
 -->
-# Bob Client Bootcamp Starter Template
+# Client Bobathon Starter Template
 
-A comprehensive template for delivering customized Bob bootcamps to clients. This template provides everything needed to plan, execute, and follow up on a successful one-day Bob training session.
+A comprehensive template for delivering customized Bobathons (Bob Bootcamps) to clients. This template provides everything needed to plan, execute, and follow up on a successful one-day Bob training session.
 
 ## 📋 Overview
 
-This bootcamp template is designed to help clients learn Bob through a structured, hands-on approach. The default format is a 6-hour session with:
+This bobathon template is designed to help clients learn Bob through a structured, hands-on approach. The default format is a 6-hour session with:
 - **Morning (3 hours):** Introduction and core Bob features
 - **Lunch (1 hour):** Break
 - **Afternoon (3 hours):** Client-specific use cases and implementation
@@ -51,10 +51,10 @@ This bootcamp template is designed to help clients learn Bob through a structure
 ## 🎯 What's Included
 
 ### Core Files
-- **`bootcamp-config.yaml`** - Main configuration file that Bob consumes
+- **`bobathon-config.yaml`** - Main configuration file that Bob consumes
 - **`README.md`** - This file, with instructions for using the template
-- **`BOOTCAMP_BUILDER_GUIDE.md`** - Complete guide for using the Bootcamp Builder mode
-- **`.bobmodes`** - Custom mode configuration for guided bootcamp creation
+- **`BOBATHON_BUILDER_GUIDE.md`** - Complete guide for using the Bobathon Builder mode
+- **`.bobmodes`** - Custom mode configuration for guided bobathon creation
 - **`schedule/detailed-agenda.md`** - Comprehensive timing breakdown and facilitator guide
 
 ### Lab Exercises
@@ -73,16 +73,16 @@ This bootcamp template is designed to help clients learn Bob through a structure
 
 ## 🚀 Quick Start
 
-### Option A: Use the Bootcamp Builder Mode (Recommended)
+### Option A: Use the Bobathon Builder Mode (Recommended)
 
-The easiest way to create a customized bootcamp is using the **Bootcamp Builder** mode, which guides you through an interactive Q&A process.
+The easiest way to create a customized bobathon is using the **Bobathon Builder** mode, which guides you through an interactive Q&A process.
 
-**📖 [Read the Bootcamp Builder Guide](BOOTCAMP_BUILDER_GUIDE.md)** for complete installation and usage instructions.
+**📖 [Read the Bobathon Builder Guide](BOBATHON_BUILDER_GUIDE.md)** for complete installation and usage instructions.
 
 **Quick Start:**
 1. Open this project in VS Code with Bob
-2. Switch to "🎓 Bootcamp Builder" mode
-3. Say: "Help me create a new bootcamp for [Client Name]"
+2. Switch to "🎓 Bobathon Builder" mode
+3. Say: "Help me create a new bobathon for [Client Name]"
 4. Answer the guided questions
 5. Bob will generate and validate all materials
 
@@ -93,11 +93,11 @@ If you prefer to manually edit the configuration:
 #### 1. Clone or Copy This Template
 ```bash
 git clone <repository-url>
-cd bob_client_bootcamp_starter
+cd bob_client_bobathon_starter
 ```
 
 #### 2. Customize the Configuration
-Edit `bootcamp-config.yaml` with your client's information:
+Edit `bobathon-config.yaml` with your client's information:
 
 ```yaml
 client:
@@ -122,7 +122,7 @@ Customize the lab exercises in the `labs/` directory based on your client's:
 - Skill level
 - Actual codebase
 
-**Tip:** You can ask Bob to help customize labs even without using the Bootcamp Builder mode.
+**Tip:** You can ask Bob to help customize labs even without using the Bobathon Builder mode.
 
 #### 4. Review the Schedule
 Check `schedule/detailed-agenda.md` and adjust timing if needed:
@@ -130,7 +130,7 @@ Check `schedule/detailed-agenda.md` and adjust timing if needed:
 - Expand for two-day format (12 hours)
 - Adjust for virtual vs. in-person delivery
 
-### 5. Deliver the Bootcamp
+### 5. Deliver the Bobathon
 Follow the detailed agenda and use Bob to demonstrate capabilities in real-time.
 
 ## 📖 Detailed Instructions
@@ -145,7 +145,7 @@ Before customizing the template, collect:
 - Team size and skill levels
 - Available time and format preferences
 
-#### Step 2: Update bootcamp-config.yaml
+#### Step 2: Update bobathon-config.yaml
 This is the most important file. Bob will read this to understand the client context.
 
 **Required Sections:**
@@ -158,7 +158,7 @@ This is the most important file. Bob will read this to understand the client con
 - `resources` - External documentation and APIs
 - `participants` - Team composition
 - `success_criteria` - Measurable outcomes
-- `follow_up` - Post-bootcamp support plan
+- `follow_up` - Post-bobathon support plan
 
 #### Step 3: Customize Lab Exercises
 
@@ -184,7 +184,7 @@ This is the most important file. Bob will read this to understand the client con
 
 ## 🌟 Bob's Unique Differentiators
 
-Understanding what makes Bob unique helps you deliver more impactful bootcamps. Bob stands out in four key areas:
+Understanding what makes Bob unique helps you deliver more impactful bobathons. Bob stands out in four key areas:
 
 ### 1. 🔧 Extensible Architecture
 - **Custom Modes**: Tailor AI behavior for specific workflows (Code, Ask, Plan, or create your own)
@@ -210,15 +210,15 @@ Understanding what makes Bob unique helps you deliver more impactful bootcamps. 
 
 **📖 For complete details, see [`resources/bob-differentiators.md`](resources/bob-differentiators.md)**
 
-### Why This Matters for Your Bootcamp
+### Why This Matters for Your Bobathon
 
-When delivering bootcamps, emphasize these differentiators:
+When delivering bobathons, emphasize these differentiators:
 - **Morning Session**: Introduce modes, Bob Findings, and literate coding
 - **Advanced Session**: Demonstrate MCP integrations and intelligent optimization
 - **Client Session**: Show how differentiators solve their specific problems
 - **Throughout**: Let participants experience automatic model selection naturally
 
-## 🎓 Bootcamp Structure
+## 🎓 Bobathon Structure
 
 ### Morning Session (3 hours)
 
@@ -298,7 +298,7 @@ Each lab should include:
 
 ## 🎯 Success Criteria
 
-### Immediate (End of Bootcamp)
+### Immediate (End of Bobathon)
 - ✅ All participants can use Bob independently
 - ✅ 80%+ complete all three labs
 - ✅ Average satisfaction rating ≥ 4/5
@@ -316,16 +316,16 @@ Each lab should include:
 
 ## 📝 Facilitator Checklist
 
-### Before the Bootcamp
-- [ ] Review and customize `bootcamp-config.yaml`
+### Before the Bobathon
+- [ ] Review and customize `bobathon-config.yaml`
 - [ ] Prepare all lab exercises with client context
 - [ ] Test labs in client's environment
 - [ ] Set up communication channels
 - [ ] Prepare demo environment
-- [ ] Send pre-bootcamp materials to participants
+- [ ] Send pre-bobathon materials to participants
 - [ ] Confirm logistics (time, location, tools)
 
-### During the Bootcamp
+### During the Bobathon
 - [ ] Start with quick wins to build confidence
 - [ ] Encourage questions and interaction
 - [ ] Monitor pace and adjust as needed
@@ -333,7 +333,7 @@ Each lab should include:
 - [ ] Capture questions for follow-up
 - [ ] Take notes on what works well
 
-### After the Bootcamp
+### After the Bobathon
 - [ ] Send follow-up email with resources
 - [ ] Schedule office hours session
 - [ ] Collect and review feedback
@@ -393,12 +393,12 @@ schedule:
 
 ## 🤝 Support
 
-### During Bootcamp
+### During Bobathon
 - Facilitator provides real-time support
 - Use dedicated Slack/Teams channel
 - Screen sharing for troubleshooting
 
-### Post-Bootcamp
+### Post-Bobathon
 - Office hours (weekly for first month)
 - Email support
 - Community forum access
@@ -406,14 +406,14 @@ schedule:
 
 ## 📞 Contact
 
-For questions about this template or Bob bootcamps:
+For questions about this template or Bob bobathons:
 - **Email:** [support@example.com]
-- **Slack:** [#bob-bootcamps]
+- **Slack:** [#bob-bobathons]
 - **Documentation:** [docs.example.com]
 
 ## 📄 License
 
-This template is provided as-is for use in Bob client bootcamps.
+This template is provided as-is for use in Bob client bobathons.
 
 ## 🔄 Version History
 
@@ -425,8 +425,8 @@ This template is provided as-is for use in Bob client bootcamps.
 
 ## 🙏 Acknowledgments
 
-This template was created based on successful Bob bootcamps delivered to clients across various industries. Special thanks to all the facilitators and participants who provided feedback to improve this template.
+This template was created based on successful Bob bobathons delivered to clients across various industries. Special thanks to all the facilitators and participants who provided feedback to improve this template.
 
 ---
 
-**Ready to get started?** Edit `bootcamp-config.yaml` with your client's information and begin customizing the labs!
+**Ready to get started?** Edit `bobathon-config.yaml` with your client's information and begin customizing the labs!

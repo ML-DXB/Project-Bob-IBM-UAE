@@ -512,12 +512,12 @@ Commit working code before making changes
 
 ## 📞 Getting Support
 
-### During Bootcamp
+### During Bobathon
 - Ask your facilitator
 - Use the support channel
 - Pair with another participant
 
-### After Bootcamp
+### After Bobathon
 - Email: [support email]
 - Slack: [channel]
 - Documentation: [URL]
