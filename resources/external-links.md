@@ -1,4 +1,4 @@
-# Bob Bobathon - External Resources
+# Bobathon - External Resources
 
 Curated list of external resources for learning and reference.
 
