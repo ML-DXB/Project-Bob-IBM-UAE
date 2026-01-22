@@ -1,4 +1,4 @@
-# Bob Bootcamp - External Resources
+# Bob Bobathon - External Resources
 
 Curated list of external resources for learning and reference.
 
@@ -304,7 +304,7 @@ Curated list of external resources for learning and reference.
 
 ## 📝 Contributing
 
-Have a great resource to add? Submit a pull request or contact the bootcamp team!
+Have a great resource to add? Submit a pull request or contact the bobathon team!
 
 **Last Updated:** 2026-01-15
 

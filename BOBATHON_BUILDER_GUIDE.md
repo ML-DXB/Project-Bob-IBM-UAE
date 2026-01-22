@@ -189,7 +189,7 @@ Bob will:
 User: "Validate the bobathon materials"
 
 Bob will:
-1. Read all bootcamp files
+1. Read all bobathon files
 2. Check required fields
 3. Verify timing calculations
 4. Ensure tech stack consistency
@@ -269,7 +269,7 @@ User: "Main docs: https://docs.bob.com, API: https://api.bob.com"
 Bob: "Do you have company-specific resources to add?"
 User: "Yes, internal wiki: https://wiki.acme.com/bob"
 
-Bob: "What are the after-bootcamp support contact details?"
+Bob: "What are the after-bobathon support contact details?"
 User: "Email: bob-support@acme.com, Slack: #bob-help, Office hours: Mon-Fri 2-4pm EST"
 
 Bob will:
