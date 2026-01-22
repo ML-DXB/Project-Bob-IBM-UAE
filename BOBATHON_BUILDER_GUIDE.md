@@ -156,15 +156,19 @@ Bob will ask about:
 4. Key use cases (API development, security, etc.)
 5. Duration and schedule
 6. Team composition
+7. Business value tracking preferences
 
 Then Bob will:
 - Generate bobathon-config.yaml
 - Customize labs based on technology preference
+- Add Business Impact sections to each lab
+- Embed real-time value indicators in exercises
 - Ask about code generation preference:
   * Generate both starter code and solutions (recommended)
   * Generate starter code only
   * No code generation (manual creation)
-- Create Lab 3 scenarios
+- Create Lab 3 scenarios with business value metrics
+- Set up business value tracking (surveys, metrics)
 - Validate everything
 ```
 
@@ -183,7 +187,24 @@ Bob will:
 7. Validate consistency
 ```
 
-### Workflow 3: Validate Existing Bobathon
+### Workflow 3: Setup Business Value Tracking
+
+```
+User: "Set up business value tracking for this bobathon"
+
+Bob will:
+1. Explain business value tracking benefits
+2. Ask about collection strategy:
+   - After each lab + end of bobathon + follow-up (recommended)
+   - After each lab + end of bobathon
+   - End of bobathon only
+3. Ask about survey tool (Google Forms, Slido, etc.)
+4. Generate survey questions for each collection point
+5. Add tracking configuration to bobathon-config.yaml
+6. Provide survey creation guidance
+```
+
+### Workflow 4: Validate Existing Bobathon
 
 ```
 User: "Validate the bobathon materials"
@@ -193,12 +214,14 @@ Bob will:
 2. Check required fields
 3. Verify timing calculations
 4. Ensure tech stack consistency
-5. Detect placeholders
-6. Report findings
-7. Offer to fix issues
+5. Check Business Impact sections exist
+6. Verify business value tracking configured
+7. Detect placeholders
+8. Report findings
+9. Offer to fix issues
 ```
 
-### Workflow 4: Adjust Schedule
+### Workflow 5: Adjust Schedule
 
 ```
 User: "We only have 4 hours instead of 6, adjust the schedule"
@@ -211,7 +234,7 @@ Bob will:
 5. Update schedule
 6. Validate new timing
 
-### Workflow 5: Save Completed Bobathon
+### Workflow 6: Save Completed Bobathon
 
 ```
 User: Bobathon is complete and validated
@@ -292,6 +315,27 @@ Bob will:
    cd ../acme-corp-bobathon
    git init
    git add .
+### 7. Business Value Tracking
+**Set up business value tracking when:**
+- You want to demonstrate ROI to stakeholders
+- Client needs metrics for adoption decisions
+- You're measuring bobathon effectiveness
+- Building case studies for future clients
+
+**Collection strategy:**
+- **Comprehensive** (recommended): After each lab + end of bobathon + 2-4 week follow-up
+- **Balanced**: After each lab + end of bobathon
+- **Minimal**: End of bobathon only
+
+**Metrics to capture:**
+- Time savings (hours/week)
+- Quality improvements (% bugs caught)
+- Security enhancements (vulnerabilities prevented)
+- Cost savings ($ per month)
+- Adoption rate (% of team using Bob)
+- Ease of use (1-5 scale)
+- Likelihood to adopt (1-5 scale)
+
    git commit -m "Initial bobathon for Acme Corp"
    git remote add origin [your-url]
    git push -u origin main
@@ -482,7 +526,11 @@ Before delivering a bobathon, ensure:
 
 - [ ] `bobathon-config.yaml` is complete (no placeholders)
 - [ ] All labs use client's tech stack
-- [ ] Lab 3 addresses client's use cases
+- [ ] All labs have Business Impact sections
+- [ ] Real-time value indicators embedded in exercises
+- [ ] Lab 3 addresses client's use cases with business value metrics
+- [ ] Business value tracking configured (if enabled)
+- [ ] Survey questions generated for data collection
 - [ ] Sample code generated (if requested)
 - [ ] Starter code exists in labs/*/starter/ directories
 - [ ] Solution code exists in labs/*/solution/ directories (if requested)

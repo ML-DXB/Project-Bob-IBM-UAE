@@ -311,3 +311,37 @@ notes: |
   - Time zone challenges for distributed teams
 
 # Made with Bob
+
+# =============================================================================
+# BUSINESS VALUE TRACKING
+# Configure how you'll measure and collect business value data
+# =============================================================================
+business_value_tracking:
+  enabled: true  # Set to false to disable tracking
+  collection_points:
+    after_each_lab: true  # Quick pulse check after Labs 1, 2, and 3
+    end_of_bobathon: true  # Comprehensive assessment at end
+    post_bobathon_followup: true  # Follow-up survey 2-4 weeks later
+    followup_timing: "2-4 weeks"
+  
+  survey_tool: "[e.g., Google Forms, Microsoft Forms, Slido, Mentimeter]"
+  survey_links:
+    lab1: "[Survey URL - to be created]"
+    lab2: "[Survey URL - to be created]"
+    lab3: "[Survey URL - to be created]"
+    end_of_bobathon: "[Survey URL - to be created]"
+    followup: "[Survey URL - to be created]"
+  
+  metrics_to_track:
+    - time_savings  # Hours saved per week
+    - quality_improvements  # % bugs caught, code consistency
+    - security_enhancements  # Vulnerabilities prevented
+    - cost_savings  # $ saved per month
+    - adoption_rate  # % of team using Bob
+    - ease_of_use  # 1-5 scale rating
+    - likelihood_to_adopt  # 1-5 scale rating
+  
+  notes: |
+    Business value tracking helps demonstrate ROI to stakeholders and improves
+    future bobathons. Recommended approach: collect data after each lab (quick),
+    at end of bobathon (comprehensive), and 2-4 weeks later (actual results).
