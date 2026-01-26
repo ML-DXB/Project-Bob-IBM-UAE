@@ -6,7 +6,7 @@ bob_context:
   primary_config: "bobathon-config.yaml"
   
 instructions_for_bob: |
-  This is a bobathon template for training clients on Bob usage.
+  This is a bobathon (Bob bootcamp) template for training clients on Bob usage.
   
   IMPORTANT: Always read bobathon-config.yaml first to understand the client context.
   
