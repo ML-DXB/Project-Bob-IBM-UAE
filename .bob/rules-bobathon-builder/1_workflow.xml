@@ -937,6 +937,7 @@
               <file>.bob/</file>
               <file>.bobmodes</file>
               <file>examples/</file>
+              <file>PROJECT_OVERVIEW.md</file>
             </files_to_exclude_if_cleanup>
             <commands>
               <command>mkdir ../{client-slug}-bobathon</command>
