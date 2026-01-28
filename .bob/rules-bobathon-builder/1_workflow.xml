@@ -639,6 +639,16 @@
       <description>Validate bobathon materials for completeness and consistency</description>
       
       <validation_checklist>
+        <category name="file_existence">
+          <check>bobathon-config.yaml exists</check>
+          <check>labs/lab1-basic-operations/instructions.md exists</check>
+          <check>labs/lab2-advanced-workflows/instructions.md exists</check>
+          <check>labs/lab3-client-specific/instructions.md exists</check>
+          <check>schedule/detailed-agenda.md exists</check>
+          <check>If code generation was requested: starter code directories exist</check>
+          <check>If solution generation was requested: solution code directories exist</check>
+        </category>
+        
         <category name="configuration">
           <check>All required fields filled in bobathon-config.yaml</check>
           <check>Use cases have priorities and time estimates</check>
@@ -677,7 +687,11 @@
       </validation_checklist>
       
       <step number="1">
-        <action>Read all bobathon files</action>
+        <action>Verify all required files exist</action>
+        <details>
+          Before reading files, use list_files to verify that all required bobathon files exist.
+          If any files are missing, report which files need to be created and offer to create them.
+        </details>
         <files_to_check>
           <file>bobathon-config.yaml</file>
           <file>labs/lab1-basic-operations/instructions.md</file>
@@ -685,9 +699,22 @@
           <file>labs/lab3-client-specific/instructions.md</file>
           <file>schedule/detailed-agenda.md</file>
         </files_to_check>
+        <missing_file_handling>
+          <action>Report missing files clearly</action>
+          <action>Explain what each missing file should contain</action>
+          <action>Offer to create missing files using appropriate workflows</action>
+        </missing_file_handling>
       </step>
       
       <step number="2">
+        <action>Read all existing bobathon files</action>
+        <details>
+          Only read files that were confirmed to exist in step 1.
+          Use read_file to examine the content of each file.
+        </details>
+      </step>
+      
+      <step number="3">
         <action>Run validation checks</action>
         <details>
           Go through each category in the validation checklist and identify
@@ -695,21 +722,23 @@
         </details>
       </step>
       
-      <step number="3">
+      <step number="4">
         <action>Report findings</action>
         <details>
           Provide a clear report of:
           - What's complete and correct
           - What needs attention
           - Specific recommendations for fixes
+          - Any files that are missing or need to be created
         </details>
       </step>
       
-      <step number="4">
+      <step number="5">
         <action>Offer to fix issues</action>
         <details>
           Ask if they want you to fix identified issues or if they prefer
-          to make changes manually.
+          to make changes manually. If files are missing, offer to create them
+          using the appropriate workflow (e.g., customize_labs, generate_schedule).
         </details>
       </step>
     </workflow>

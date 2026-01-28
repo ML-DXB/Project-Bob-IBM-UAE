@@ -293,7 +293,11 @@
 
   <validation_workflow>
     <step number="1">
-      <action>Read all bobathon files</action>
+      <action>Verify all required files exist</action>
+      <details>
+        Use list_files to check that all required bobathon files exist before attempting to read them.
+        If any files are missing, report them clearly and offer to create them.
+      </details>
       <files>
         <file>bobathon-config.yaml</file>
         <file>labs/lab1-basic-operations/instructions.md</file>
@@ -301,9 +305,23 @@
         <file>labs/lab3-client-specific/instructions.md</file>
         <file>schedule/detailed-agenda.md</file>
       </files>
+      <conditional_files>
+        <file condition="code_generation_requested">labs/lab1-basic-operations/starter/</file>
+        <file condition="code_generation_requested">labs/lab2-advanced-workflows/starter/</file>
+        <file condition="solution_generation_requested">labs/lab1-basic-operations/solution/</file>
+        <file condition="solution_generation_requested">labs/lab2-advanced-workflows/solution/</file>
+      </conditional_files>
     </step>
 
     <step number="2">
+      <action>Read all existing bobathon files</action>
+      <details>
+        Only read files that were confirmed to exist in step 1.
+        For missing files, skip reading and note them in the validation report.
+      </details>
+    </step>
+
+    <step number="3">
       <action>Run configuration validation</action>
       <checks>
         <check>Required fields</check>
@@ -312,7 +330,7 @@
       </checks>
     </step>
 
-    <step number="3">
+    <step number="4">
       <action>Run lab validation</action>
       <checks>
         <check>Lab 1 customization</check>
@@ -322,7 +340,7 @@
       </checks>
     </step>
 
-    <step number="4">
+    <step number="5">
       <action>Run schedule validation</action>
       <checks>
         <check>Timing calculations</check>
@@ -331,7 +349,7 @@
       </checks>
     </step>
 
-    <step number="5">
+    <step number="6">
       <action>Run consistency validation</action>
       <checks>
         <check>Cross-file consistency</check>
@@ -340,7 +358,7 @@
       </checks>
     </step>
 
-    <step number="6">
+    <step number="7">
       <action>Run quality checks</action>
       <checks>
         <check>Completeness</check>
@@ -350,15 +368,17 @@
       </checks>
     </step>
 
-    <step number="7">
+    <step number="8">
       <action>Generate validation report</action>
       <report_structure>
         <section name="summary">
           <item>Overall status (Ready / Needs Work)</item>
           <item>Number of issues found</item>
           <item>Critical issues that must be fixed</item>
+          <item>Missing files that need to be created</item>
         </section>
         <section name="findings">
+          <category>Missing Files</category>
           <category>Configuration Issues</category>
           <category>Lab Issues</category>
           <category>Schedule Issues</category>
@@ -367,13 +387,14 @@
         </section>
         <section name="recommendations">
           <item>Specific fixes needed</item>
+          <item>Files to create with suggested workflows</item>
           <item>Priority order</item>
           <item>Estimated time to fix</item>
         </section>
       </report_structure>
     </step>
 
-    <step number="8">
+    <step number="9">
       <action>Offer to fix issues</action>
       <ask_followup_question>
         <question>I found [X] issues that need attention. Would you like me to fix them?</question>
@@ -388,6 +409,18 @@
   </validation_workflow>
 
   <error_messages>
+    <error type="missing_file">
+      <message>Required file '{file_path}' does not exist</message>
+      <action>Offer to create the file using the appropriate workflow</action>
+      <workflows>
+        <workflow file="labs/lab1-basic-operations/instructions.md">customize_labs</workflow>
+        <workflow file="labs/lab2-advanced-workflows/instructions.md">customize_labs</workflow>
+        <workflow file="labs/lab3-client-specific/instructions.md">create_lab3_exercises</workflow>
+        <workflow file="schedule/detailed-agenda.md">generate_schedule</workflow>
+        <workflow file="bobathon-config.yaml">setup_new_bobathon</workflow>
+      </workflows>
+    </error>
+    
     <error type="missing_required_field">
       <message>Required field '{field_name}' is missing or empty in {file_name}</message>
       <action>Ask user to provide the value</action>
