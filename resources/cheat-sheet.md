@@ -88,16 +88,10 @@ Make precise changes to files (PREFERRED for edits).
 <apply_diff>
 <path>src/utils.py</path>
 <diff>
-<<<<<<< SEARCH
 :start_line:10
 -------
 def old_function():
     return "old"
-=======
-def new_function():
-    """Updated function with docs"""
-    return "new"
->>>>>>> REPLACE
 </diff>
 </apply_diff>
 ```
