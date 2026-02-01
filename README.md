@@ -37,7 +37,7 @@ common_tasks:
   - prepare_materials: "Read all relevant files, ensure consistency with client context"
 ---
 -->
-# Client Bobathon Starter Template
+# Project Bob Overview and Content
 
 A comprehensive template for delivering customized Bobathons (Bob Bootcamps) to clients. This template provides everything needed to plan, execute, and follow up on a successful one-day Bob training session.
 
